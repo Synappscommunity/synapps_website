@@ -1,0 +1,117 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.freeBox__zGYfa {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  height: auto;
+  background: #ffffff;
+  box-shadow: 4px 6px 50px 0px #d0d0d04d;
+  max-width: 300px;
+  border-radius: 20px;
+  padding: 5px;
+}
+@media (max-width: 760px) {
+  .freeBox__zGYfa {
+    width: 260px;
+    max-width: 260px;
+  }
+}
+.freeBox__q4Zh {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+@media (max-width: 760px) {
+  .freeBox__q4Zh {
+    margin-top: 1px;
+  }
+}
+.img__hLdWc {
+  position: relative;
+  object-fit: cover;
+  max-width: 64px;
+  max-height: 64px;
+  margin-top: 0;
+}
+.img__hLdWc > picture > img {
+  object-fit: cover;
+}
+.freeBox__trkky {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin-top: 32px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .freeBox__trkky {
+    margin-top: 16px;
+  }
+}
+.slotTargetTitle {
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  line-height: 29px;
+}
+.freeBox__fpv1R {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 0;
+}
+.slotTargetSubtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #185adb;
+  line-height: 22px;
+  text-align: center;
+}
+.freeBox___6AqI7 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 315px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .freeBox___6AqI7 {
+    margin-top: 24px;
+  }
+}
+.slotTargetDescription {
+  font-size: 18px;
+}
+.freeBox__bNuX {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
