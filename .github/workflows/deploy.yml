@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main] # or 'master'
+  workflow_run:
+    workflows: ["Sync, build and deploy Plasmic app"]
+    types:
+      - completed
 
 permissions:
   contents: write
