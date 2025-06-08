@@ -610,7 +610,7 @@ function PlasmicFooterSection__RenderFunc(props) {
                 </PlasmicLink__>
               }
               <React.Fragment>
-                {" \u0645\u06cc \u0628\u0627\u0634\u062f."}
+                {" \u0645\u06cc \u0628\u0627\u0634\u062f"}
               </React.Fragment>
             </React.Fragment>
           )}
