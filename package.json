@@ -18,7 +18,7 @@
     "@plasmicpkgs/plasmic-tabs": "^0.0.60",
     "@plasmicpkgs/react-aria": "^0.0.141",
     "@plasmicpkgs/react-slick": "^0.0.240",
-    "next": "14.2.29",
+    "next": "^14",
     "react": "^18",
     "react-dom": "^18",
     "react-slick": "^0.30.3",
