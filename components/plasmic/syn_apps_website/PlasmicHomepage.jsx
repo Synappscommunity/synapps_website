@@ -36,9 +36,6 @@ import HeaderButton from "../../HeaderButton"; // plasmic-import: poRsrDl7MvPt/c
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu";
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu";
 import Section from "../../Section"; // plasmic-import: l2-ucxw7CvPM/component
-import { SliderWrapper } from "@plasmicpkgs/react-slick";
-import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
-import Teams2 from "../../Teams2"; // plasmic-import: VFq-mItDTtzM/component
 import { DataFetcher } from "@plasmicpkgs/plasmic-query";
 import FaqTab from "../../FaqTab"; // plasmic-import: QR_t6FoGThXW/component
 import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
@@ -102,14 +99,6 @@ function PlasmicHomepage__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
-      },
-      {
-        path: "sliderCarousel.currentSlide",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
-        refName: "sliderCarousel",
-        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       },
       {
         path: "faqنصبوراهاندازي.activePanelId",
@@ -2309,1327 +2298,6 @@ function PlasmicHomepage__RenderFunc(props) {
                   </div>
                 </div>
               </div>
-              {(() => {
-                const child$Props = {
-                  arrows: hasVariant(globalVariants, "screen", "mobile")
-                    ? false
-                    : undefined,
-                  autoplay: true,
-                  autoplaySpeed: 2200,
-                  beforeChange: async (...eventArgs) => {
-                    generateStateOnChangePropForCodeComponents(
-                      $state,
-                      "currentSlide",
-                      ["sliderCarousel", "currentSlide"],
-                      SliderWrapper_Helpers
-                    ).apply(null, eventArgs);
-                  },
-                  className: classNames("__wab_instance", sty.sliderCarousel),
-                  dots: true,
-                  initialSlide: generateStateValueProp($state, [
-                    "sliderCarousel",
-                    "currentSlide"
-                  ]),
-                  ref: ref => {
-                    $refs["sliderCarousel"] = ref;
-                  },
-                  rows: hasVariant(globalVariants, "screen", "mobile") ? 2 : 1,
-                  sliderScopeClassName: sty["sliderCarousel__slider"],
-                  slidesPerRow: hasVariant(globalVariants, "screen", "mobile")
-                    ? 1
-                    : 3,
-                  swipeToSlide: hasVariant(globalVariants, "screen", "mobile")
-                    ? true
-                    : undefined
-                };
-                initializeCodeComponentStates(
-                  $state,
-                  [
-                    {
-                      name: "currentSlide",
-                      plasmicStateName: "sliderCarousel.currentSlide"
-                    }
-                  ],
-
-                  [],
-                  SliderWrapper_Helpers ?? {},
-                  child$Props
-                );
-                return (
-                  <SliderWrapper
-                    data-plasmic-name={"sliderCarousel"}
-                    data-plasmic-override={overrides.sliderCarousel}
-                    {...child$Props}
-                  >
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0645\u0631\u06a9\u0632\u0637\u0628\u064a\u06a9\u0648\u062f\u06a9\u0627\u06462"
-                      }
-                      data-plasmic-override={overrides.مرکزطبيکودکان2}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.مرکزطبيکودکان2
-                      )}
-                      description={null}
-                      icon={null}
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__r8SYg
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xeCuq
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__d68Qx
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f3\u06f9\u06f8"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ut0UB
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0645\u0631\u06a9\u0632 \u0637\u0628\u06cc \u06a9\u0648\u062f\u06a9\u0627\u0646"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={"\u0633\u064a\u0646\u06272"}
-                      data-plasmic-override={overrides.سينا2}
-                      className={classNames("__wab_instance", sty.سينا2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__jn0Yb
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__p8Pha)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__l8NqB
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__vBg7J
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__anXl3
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f3\u06f9\u06f9"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__reKqC
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0633\u064a\u0646\u0627"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0627\u0645\u0627\u0645\u062e\u0645\u064a\u0646\u064a2"
-                      }
-                      data-plasmic-override={overrides.امامخميني2}
-                      className={classNames("__wab_instance", sty.امامخميني2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xoeM
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__pyBRv)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ouM6N
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__q4HJm
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___8Jm6W
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__mnH1L
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0627\u0645\u0627\u0645 \u062e\u0645\u064a\u0646\u06cc (\u0631\u0647)"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0645\u0631\u06a9\u0632\u0642\u0644\u0628"
-                      }
-                      data-plasmic-override={overrides.مرکزقلب}
-                      className={classNames("__wab_instance", sty.مرکزقلب)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__mrv1L
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__upUBt)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__apnG
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xcV3Y
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__zvfOz
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f3"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___7Hn3
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0645\u0631\u06a9\u0632 \u0642\u0644\u0628 \u062a\u0647\u0631\u0627\u0646"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0634\u0631\u064a\u0639\u062a\u064a2"
-                      }
-                      data-plasmic-override={overrides.شريعتي2}
-                      className={classNames("__wab_instance", sty.شريعتي2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__fLRfv
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img___1B0Vb)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__obOn2
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__o7GnY
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xuOwH
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__r3IPq
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0634\u0631\u064a\u0639\u062a\u06cc"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0627\u0645\u064a\u0631\u0627\u0639\u0644\u06452"
-                      }
-                      data-plasmic-override={overrides.اميراعلم2}
-                      className={classNames("__wab_instance", sty.اميراعلم2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__aLgf9
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={null}
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ny49M
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__eojie
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ekGYo
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___2Hrwx
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0627\u0645\u064a\u0631\u0627\u0639\u0644\u0645"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={"\u0622\u0631\u06342"}
-                      data-plasmic-override={overrides.آرش2}
-                      className={classNames("__wab_instance", sty.آرش2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__qrNSm
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={null}
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__fOUnf
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__jCxx8
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__gmm4
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__eUgve
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0622\u0631\u0634"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0641\u0627\u0631\u0627\u0628\u064a2"
-                      }
-                      data-plasmic-override={overrides.فارابي2}
-                      className={classNames("__wab_instance", sty.فارابي2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ijGzc
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__znMe1)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__eWuPe
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___7KyZw
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__l0Wu
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__w1GMq
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0641\u0627\u0631\u0627\u0628\u06cc"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={"\u0631\u0627\u0632\u064a2"}
-                      data-plasmic-override={overrides.رازي2}
-                      className={classNames("__wab_instance", sty.رازي2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xQdnK
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img___0SmjB)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___7Z0M
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__purSn
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___3N4B2
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__uVcD7
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0631\u0627\u0632\u06cc"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0628\u0647\u0627\u0631\u0644\u06482"
-                      }
-                      data-plasmic-override={overrides.بهارلو2}
-                      className={classNames("__wab_instance", sty.بهارلو2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___17CtS
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img___9Rl3A)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__t7Apu
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__bFm1Q
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ku6F
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__edXJ
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0628\u0647\u0627\u0631\u0644\u0648"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={"\u0631\u0648\u0632\u0628\u06472"}
-                      data-plasmic-override={overrides.روزبه2}
-                      className={classNames("__wab_instance", sty.روزبه2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__hC6FM
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__xhg60)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__iMyyJ
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__bgFFn
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__rvCmb
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__kkNDl
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0631\u0648\u0632\u0628\u0647"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0636\u064a\u0627\u0626\u064a\u0627\u06462"
-                      }
-                      data-plasmic-override={overrides.ضيائيان2}
-                      className={classNames("__wab_instance", sty.ضيائيان2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__yi89D
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__xZdpN)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__irRjC
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__egMly
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__y4D6
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__rwtUp
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0636\u064a\u0627\u0626\u064a\u0627\u0646"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={
-                        "\u0628\u0647\u0631\u0627\u0645\u064a2"
-                      }
-                      data-plasmic-override={overrides.بهرامي2}
-                      className={classNames("__wab_instance", sty.بهرامي2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__yuUdb
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__pAq8O)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ewWHs
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__rCQm
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___2WdCk
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__zTf05
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0628\u0647\u0631\u0627\u0645\u06cc"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={"\u062d\u06a9\u064a\u06452"}
-                      data-plasmic-override={overrides.حکيم2}
-                      className={classNames("__wab_instance", sty.حکيم2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__d1V0
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__eKvPf)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__awcDy
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__t2CV0
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__dZjCo
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__n07C
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u062d\u06a9\u064a\u0645"
-                          }
-                        </div>
-                      }
-                    />
-
-                    <Teams2
-                      data-plasmic-name={"\u064a\u0627\u06332"}
-                      data-plasmic-override={overrides.ياس2}
-                      className={classNames("__wab_instance", sty.ياس2)}
-                      description={
-                        false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___2K1R8
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
-                            }
-                          </div>
-                        ) : null
-                      }
-                      icon={
-                        false ? (
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__pmP9)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"64px"}
-                            displayMaxWidth={"64px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/syn_apps_website/images/teamPng.png",
-                              fullWidth: 128,
-                              fullHeight: 128,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        ) : null
-                      }
-                      subtitle={
-                        <Stack__
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__vxElI
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ogm2N
-                            )}
-                          >
-                            {
-                              "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__vxeSy
-                            )}
-                          >
-                            {
-                              "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
-                            }
-                          </div>
-                        </Stack__>
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___3X5Oa
-                          )}
-                        >
-                          {
-                            "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u064a\u0627\u0633"
-                          }
-                        </div>
-                      }
-                    />
-                  </SliderWrapper>
-                );
-              })()}
               {false ? (
                 <div className={classNames(projectcss.all, sty.freeBox__uCtfY)}>
                   <div
@@ -3722,6 +2390,735 @@ function PlasmicHomepage__RenderFunc(props) {
                   </Stack__>
                 </div>
               ) : null}
+              <div
+                data-plasmic-name={"customersStack"}
+                data-plasmic-override={overrides.customersStack}
+                className={classNames(projectcss.all, sty.customersStack)}
+              >
+                <Stack__
+                  as={"div"}
+                  data-plasmic-name={"customersList"}
+                  data-plasmic-override={overrides.customersList}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.customersList)}
+                >
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={
+                      "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646"
+                    }
+                    data-plasmic-override={overrides.مرکزطبیکودکان}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.مرکزطبیکودکان)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xiFn5
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0645\u0631\u06a9\u0632 \u0637\u0628\u06cc \u06a9\u0648\u062f\u06a9\u0627\u0646"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__f4OH7)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ekbOi
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__eAj3S
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f3\u06f9\u06f8"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0633\u06cc\u0646\u0627"}
+                    data-plasmic-override={overrides.سینا}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.سینا)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zqsPv
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0633\u064a\u0646\u0627"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__o9D4Q)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__vyU3X
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cfZzt
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f3\u06f9\u06f9"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={
+                      "\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc"
+                    }
+                    data-plasmic-override={overrides.امامخمینی}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.امامخمینی)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__sx7Mt
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0627\u0645\u0627\u0645 \u062e\u0645\u064a\u0646\u06cc (\u0631\u0647)"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__mwI4J)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xNlz1
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__p3JTb
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={
+                      "\u0645\u0631\u06a9\u0632\u0642\u0644\u0628"
+                    }
+                    data-plasmic-override={overrides.مرکزقلب}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.مرکزقلب)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qEmfG
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0645\u0631\u06a9\u0632 \u0642\u0644\u0628 \u062a\u0647\u0631\u0627\u0646"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__q1ZmW)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__u4KVq
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xf3Kp
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f3"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0634\u0631\u06cc\u0639\u062a\u06cc"}
+                    data-plasmic-override={overrides.شریعتی}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.شریعتی)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__tiMhd
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0634\u0631\u064a\u0639\u062a\u06cc"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__eJOxc)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__vReYi
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__nXWd
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={
+                      "\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645"
+                    }
+                    data-plasmic-override={overrides.امیراعلم}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.امیراعلم)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__t8Ukq
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0627\u0645\u064a\u0631\u0627\u0639\u0644\u0645"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__fdRuc)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dcSxb
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__rBRdG
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0622\u0631\u0634"}
+                    data-plasmic-override={overrides.آرش}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.آرش)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__lvgaz
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0622\u0631\u0634"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__vqHdh)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__njHg
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__uu5Yd
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0641\u0627\u0631\u0627\u0628\u06cc"}
+                    data-plasmic-override={overrides.فارابی}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.فارابی)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__kw8Fm
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0641\u0627\u0631\u0627\u0628\u06cc"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__a4MSt)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__f0SzR
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xnBif
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0631\u0627\u0632\u06cc"}
+                    data-plasmic-override={overrides.رازی}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.رازی)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__gjnyi
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0631\u0627\u0632\u06cc"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__mkYm7)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ahloA
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__kfZsx
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0628\u0647\u0627\u0631\u0644\u0648"}
+                    data-plasmic-override={overrides.بهارلو}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.بهارلو)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___6GR5I
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0628\u0647\u0627\u0631\u0644\u0648"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__izfwR)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__x3Lf4
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__mDkYl
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0631\u0648\u0632\u0628\u0647"}
+                    data-plasmic-override={overrides.روزبه}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.روزبه)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__nWlVy
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0631\u0648\u0632\u0628\u0647"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__c5Plo)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__gvRol
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__zrtGm
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={
+                      "\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646"
+                    }
+                    data-plasmic-override={overrides.ضیائیان}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.ضیائیان)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ac4Mw
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0636\u064a\u0627\u0626\u064a\u0627\u0646"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__yetqn)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yrDkX
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__lug
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u0628\u0647\u0631\u0627\u0645\u06cc"}
+                    data-plasmic-override={overrides.بهرامی}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.بهرامی)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___633Ac
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0628\u0647\u0631\u0627\u0645\u06cc"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__g4Yk)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__nnw2H
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__aDe0L
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u062d\u06a9\u06cc\u0645"}
+                    data-plasmic-override={overrides.حکیم}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.حکیم)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__cgJrH
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u062d\u06a9\u064a\u0645"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__vCk06)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___9M1Yz
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__mSu2Q
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"\u06cc\u0627\u0633"}
+                    data-plasmic-override={overrides.یاس}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.یاس)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__sytmi
+                      )}
+                    >
+                      {
+                        "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u064a\u0627\u0633"
+                      }
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__zbym0)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__tGkNg
+                        )}
+                      >
+                        {
+                          "\u062f\u0648\u0644\u062a\u06cc - \u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__uU5Z2
+                        )}
+                      >
+                        {
+                          "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
+                        }
+                      </div>
+                    </Stack__>
+                  </Stack__>
+                </Stack__>
+              </div>
             </Stack__>
           </Section>
           <Section
@@ -9813,22 +9210,23 @@ const PlasmicDescendants = {
     "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc7",
     "section3Userbase",
     "statistics",
-    "sliderCarousel",
-    "\u0645\u0631\u06a9\u0632\u0637\u0628\u064a\u06a9\u0648\u062f\u06a9\u0627\u06462",
-    "\u0633\u064a\u0646\u06272",
-    "\u0627\u0645\u0627\u0645\u062e\u0645\u064a\u0646\u064a2",
+    "customersStack",
+    "customersList",
+    "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646",
+    "\u0633\u06cc\u0646\u0627",
+    "\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc",
     "\u0645\u0631\u06a9\u0632\u0642\u0644\u0628",
-    "\u0634\u0631\u064a\u0639\u062a\u064a2",
-    "\u0627\u0645\u064a\u0631\u0627\u0639\u0644\u06452",
-    "\u0622\u0631\u06342",
-    "\u0641\u0627\u0631\u0627\u0628\u064a2",
-    "\u0631\u0627\u0632\u064a2",
-    "\u0628\u0647\u0627\u0631\u0644\u06482",
-    "\u0631\u0648\u0632\u0628\u06472",
-    "\u0636\u064a\u0627\u0626\u064a\u0627\u06462",
-    "\u0628\u0647\u0631\u0627\u0645\u064a2",
-    "\u062d\u06a9\u064a\u06452",
-    "\u064a\u0627\u06332",
+    "\u0634\u0631\u06cc\u0639\u062a\u06cc",
+    "\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645",
+    "\u0622\u0631\u0634",
+    "\u0641\u0627\u0631\u0627\u0628\u06cc",
+    "\u0631\u0627\u0632\u06cc",
+    "\u0628\u0647\u0627\u0631\u0644\u0648",
+    "\u0631\u0648\u0632\u0628\u0647",
+    "\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646",
+    "\u0628\u0647\u0631\u0627\u0645\u06cc",
+    "\u062d\u06a9\u06cc\u0645",
+    "\u06cc\u0627\u0633",
     "section4WallOfLove",
     "getLoves",
     "loveMessage",
@@ -10097,62 +9495,83 @@ const PlasmicDescendants = {
   section3Userbase: [
     "section3Userbase",
     "statistics",
-    "sliderCarousel",
-    "\u0645\u0631\u06a9\u0632\u0637\u0628\u064a\u06a9\u0648\u062f\u06a9\u0627\u06462",
-    "\u0633\u064a\u0646\u06272",
-    "\u0627\u0645\u0627\u0645\u062e\u0645\u064a\u0646\u064a2",
+    "customersStack",
+    "customersList",
+    "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646",
+    "\u0633\u06cc\u0646\u0627",
+    "\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc",
     "\u0645\u0631\u06a9\u0632\u0642\u0644\u0628",
-    "\u0634\u0631\u064a\u0639\u062a\u064a2",
-    "\u0627\u0645\u064a\u0631\u0627\u0639\u0644\u06452",
-    "\u0622\u0631\u06342",
-    "\u0641\u0627\u0631\u0627\u0628\u064a2",
-    "\u0631\u0627\u0632\u064a2",
-    "\u0628\u0647\u0627\u0631\u0644\u06482",
-    "\u0631\u0648\u0632\u0628\u06472",
-    "\u0636\u064a\u0627\u0626\u064a\u0627\u06462",
-    "\u0628\u0647\u0631\u0627\u0645\u064a2",
-    "\u062d\u06a9\u064a\u06452",
-    "\u064a\u0627\u06332"
+    "\u0634\u0631\u06cc\u0639\u062a\u06cc",
+    "\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645",
+    "\u0622\u0631\u0634",
+    "\u0641\u0627\u0631\u0627\u0628\u06cc",
+    "\u0631\u0627\u0632\u06cc",
+    "\u0628\u0647\u0627\u0631\u0644\u0648",
+    "\u0631\u0648\u0632\u0628\u0647",
+    "\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646",
+    "\u0628\u0647\u0631\u0627\u0645\u06cc",
+    "\u062d\u06a9\u06cc\u0645",
+    "\u06cc\u0627\u0633"
   ],
 
   statistics: ["statistics"],
-  sliderCarousel: [
-    "sliderCarousel",
-    "\u0645\u0631\u06a9\u0632\u0637\u0628\u064a\u06a9\u0648\u062f\u06a9\u0627\u06462",
-    "\u0633\u064a\u0646\u06272",
-    "\u0627\u0645\u0627\u0645\u062e\u0645\u064a\u0646\u064a2",
+  customersStack: [
+    "customersStack",
+    "customersList",
+    "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646",
+    "\u0633\u06cc\u0646\u0627",
+    "\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc",
     "\u0645\u0631\u06a9\u0632\u0642\u0644\u0628",
-    "\u0634\u0631\u064a\u0639\u062a\u064a2",
-    "\u0627\u0645\u064a\u0631\u0627\u0639\u0644\u06452",
-    "\u0622\u0631\u06342",
-    "\u0641\u0627\u0631\u0627\u0628\u064a2",
-    "\u0631\u0627\u0632\u064a2",
-    "\u0628\u0647\u0627\u0631\u0644\u06482",
-    "\u0631\u0648\u0632\u0628\u06472",
-    "\u0636\u064a\u0627\u0626\u064a\u0627\u06462",
-    "\u0628\u0647\u0631\u0627\u0645\u064a2",
-    "\u062d\u06a9\u064a\u06452",
-    "\u064a\u0627\u06332"
+    "\u0634\u0631\u06cc\u0639\u062a\u06cc",
+    "\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645",
+    "\u0622\u0631\u0634",
+    "\u0641\u0627\u0631\u0627\u0628\u06cc",
+    "\u0631\u0627\u0632\u06cc",
+    "\u0628\u0647\u0627\u0631\u0644\u0648",
+    "\u0631\u0648\u0632\u0628\u0647",
+    "\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646",
+    "\u0628\u0647\u0631\u0627\u0645\u06cc",
+    "\u062d\u06a9\u06cc\u0645",
+    "\u06cc\u0627\u0633"
   ],
 
-  مرکزطبيکودکان2: [
-    "\u0645\u0631\u06a9\u0632\u0637\u0628\u064a\u06a9\u0648\u062f\u06a9\u0627\u06462"
+  customersList: [
+    "customersList",
+    "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646",
+    "\u0633\u06cc\u0646\u0627",
+    "\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc",
+    "\u0645\u0631\u06a9\u0632\u0642\u0644\u0628",
+    "\u0634\u0631\u06cc\u0639\u062a\u06cc",
+    "\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645",
+    "\u0622\u0631\u0634",
+    "\u0641\u0627\u0631\u0627\u0628\u06cc",
+    "\u0631\u0627\u0632\u06cc",
+    "\u0628\u0647\u0627\u0631\u0644\u0648",
+    "\u0631\u0648\u0632\u0628\u0647",
+    "\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646",
+    "\u0628\u0647\u0631\u0627\u0645\u06cc",
+    "\u062d\u06a9\u06cc\u0645",
+    "\u06cc\u0627\u0633"
   ],
 
-  سينا2: ["\u0633\u064a\u0646\u06272"],
-  امامخميني2: ["\u0627\u0645\u0627\u0645\u062e\u0645\u064a\u0646\u064a2"],
+  مرکزطبیکودکان: [
+    "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646"
+  ],
+
+  سینا: ["\u0633\u06cc\u0646\u0627"],
+  امامخمینی: ["\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc"],
   مرکزقلب: ["\u0645\u0631\u06a9\u0632\u0642\u0644\u0628"],
-  شريعتي2: ["\u0634\u0631\u064a\u0639\u062a\u064a2"],
-  اميراعلم2: ["\u0627\u0645\u064a\u0631\u0627\u0639\u0644\u06452"],
-  آرش2: ["\u0622\u0631\u06342"],
-  فارابي2: ["\u0641\u0627\u0631\u0627\u0628\u064a2"],
-  رازي2: ["\u0631\u0627\u0632\u064a2"],
-  بهارلو2: ["\u0628\u0647\u0627\u0631\u0644\u06482"],
-  روزبه2: ["\u0631\u0648\u0632\u0628\u06472"],
-  ضيائيان2: ["\u0636\u064a\u0627\u0626\u064a\u0627\u06462"],
-  بهرامي2: ["\u0628\u0647\u0631\u0627\u0645\u064a2"],
-  حکيم2: ["\u062d\u06a9\u064a\u06452"],
-  ياس2: ["\u064a\u0627\u06332"],
+  شریعتی: ["\u0634\u0631\u06cc\u0639\u062a\u06cc"],
+  امیراعلم: ["\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645"],
+  آرش: ["\u0622\u0631\u0634"],
+  فارابی: ["\u0641\u0627\u0631\u0627\u0628\u06cc"],
+  رازی: ["\u0631\u0627\u0632\u06cc"],
+  بهارلو: ["\u0628\u0647\u0627\u0631\u0644\u0648"],
+  روزبه: ["\u0631\u0648\u0632\u0628\u0647"],
+  ضیائیان: ["\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646"],
+  بهرامی: ["\u0628\u0647\u0631\u0627\u0645\u06cc"],
+  حکیم: ["\u062d\u06a9\u06cc\u0645"],
+  یاس: ["\u06cc\u0627\u0633"],
   section4WallOfLove: [
     "section4WallOfLove",
     "getLoves",
@@ -10623,28 +10042,29 @@ export const PlasmicHomepage = Object.assign(
     ),
     section3Userbase: makeNodeComponent("section3Userbase"),
     statistics: makeNodeComponent("statistics"),
-    sliderCarousel: makeNodeComponent("sliderCarousel"),
-    مرکزطبيکودکان2: makeNodeComponent(
-      "\u0645\u0631\u06a9\u0632\u0637\u0628\u064a\u06a9\u0648\u062f\u06a9\u0627\u06462"
+    customersStack: makeNodeComponent("customersStack"),
+    customersList: makeNodeComponent("customersList"),
+    مرکزطبیکودکان: makeNodeComponent(
+      "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646"
     ),
-    سينا2: makeNodeComponent("\u0633\u064a\u0646\u06272"),
-    امامخميني2: makeNodeComponent(
-      "\u0627\u0645\u0627\u0645\u062e\u0645\u064a\u0646\u064a2"
+    سینا: makeNodeComponent("\u0633\u06cc\u0646\u0627"),
+    امامخمینی: makeNodeComponent(
+      "\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc"
     ),
     مرکزقلب: makeNodeComponent("\u0645\u0631\u06a9\u0632\u0642\u0644\u0628"),
-    شريعتي2: makeNodeComponent("\u0634\u0631\u064a\u0639\u062a\u064a2"),
-    اميراعلم2: makeNodeComponent(
-      "\u0627\u0645\u064a\u0631\u0627\u0639\u0644\u06452"
+    شریعتی: makeNodeComponent("\u0634\u0631\u06cc\u0639\u062a\u06cc"),
+    امیراعلم: makeNodeComponent(
+      "\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645"
     ),
-    آرش2: makeNodeComponent("\u0622\u0631\u06342"),
-    فارابي2: makeNodeComponent("\u0641\u0627\u0631\u0627\u0628\u064a2"),
-    رازي2: makeNodeComponent("\u0631\u0627\u0632\u064a2"),
-    بهارلو2: makeNodeComponent("\u0628\u0647\u0627\u0631\u0644\u06482"),
-    روزبه2: makeNodeComponent("\u0631\u0648\u0632\u0628\u06472"),
-    ضيائيان2: makeNodeComponent("\u0636\u064a\u0627\u0626\u064a\u0627\u06462"),
-    بهرامي2: makeNodeComponent("\u0628\u0647\u0631\u0627\u0645\u064a2"),
-    حکيم2: makeNodeComponent("\u062d\u06a9\u064a\u06452"),
-    ياس2: makeNodeComponent("\u064a\u0627\u06332"),
+    آرش: makeNodeComponent("\u0622\u0631\u0634"),
+    فارابی: makeNodeComponent("\u0641\u0627\u0631\u0627\u0628\u06cc"),
+    رازی: makeNodeComponent("\u0631\u0627\u0632\u06cc"),
+    بهارلو: makeNodeComponent("\u0628\u0647\u0627\u0631\u0644\u0648"),
+    روزبه: makeNodeComponent("\u0631\u0648\u0632\u0628\u0647"),
+    ضیائیان: makeNodeComponent("\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646"),
+    بهرامی: makeNodeComponent("\u0628\u0647\u0631\u0627\u0645\u06cc"),
+    حکیم: makeNodeComponent("\u062d\u06a9\u06cc\u0645"),
+    یاس: makeNodeComponent("\u06cc\u0627\u0633"),
     section4WallOfLove: makeNodeComponent("section4WallOfLove"),
     getLoves: makeNodeComponent("getLoves"),
     loveMessage: makeNodeComponent("loveMessage"),
