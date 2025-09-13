@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -23,8 +22,9 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { BaseTooltip } from "@plasmicpkgs/react-aria/skinny/registerTooltip";
 import OverlayArrow from "../../OverlayArrow"; // plasmic-import: TmWqxKMkHHIo/component
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicTooltip.module.css"; // plasmic-import: U44kK7A0RrhO/css
 
@@ -96,6 +96,9 @@ function PlasmicTooltip__RenderFunc(props) {
     $queries: {},
     $refs
   });
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   return (
     <BaseTooltip
       data-plasmic-name={"ariaTooltip"}
@@ -107,8 +110,8 @@ function PlasmicTooltip__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless,
         sty.ariaTooltip
       )}
       closeDelay={args.closeDelay}
@@ -127,8 +130,8 @@ function PlasmicTooltip__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless
       )}
       tooltipContent={
         <React.Fragment>
@@ -139,11 +142,9 @@ function PlasmicTooltip__RenderFunc(props) {
             dark={true}
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
-            hasGap={true}
             className={classNames(projectcss.all, sty.freeBox)}
           >
             {renderPlasmicSlot({
@@ -173,7 +174,7 @@ function PlasmicTooltip__RenderFunc(props) {
               value: args.content,
               className: classNames(sty.slotTargetContent)
             })}
-          </Stack__>
+          </div>
         </React.Fragment>
       }
     >

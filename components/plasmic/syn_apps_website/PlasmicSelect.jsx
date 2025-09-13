@@ -25,8 +25,9 @@ import * as pp from "@plasmicapp/react-web";
 import Select__Overlay from "../../Select__Overlay"; // plasmic-import: LB-H7qHGKMki/component
 import Select__Option from "../../Select__Option"; // plasmic-import: XE3S3_F35mCU/component
 import Select__OptionGroup from "../../Select__OptionGroup"; // plasmic-import: 8OhaiNWOT655/component
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicSelect.module.css"; // plasmic-import: EukhLx7Veq-I/css
 import ChevronDownSvgIcon from "./icons/PlasmicIcon__ChevronDownSvg"; // plasmic-import: bbnD8h4ldXog/icon
@@ -134,6 +135,9 @@ function PlasmicSelect__RenderFunc(props) {
   const triggers = {
     focusVisibleWithin_root: isRootFocusVisibleWithin
   };
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   return (
     <PlasmicSelectContext.Provider value={{ variants, args }}>
       <div
@@ -146,8 +150,8 @@ function PlasmicSelect__RenderFunc(props) {
           projectcss.root_reset,
           projectcss.plasmic_default_styles,
           projectcss.plasmic_mixins,
-          projectcss.plasmic_tokens,
-          plasmic_antd_5_hostless_css.plasmic_tokens,
+          styleTokensClassNames,
+          styleTokensClassNames_antd_5_hostless,
           sty.root,
           {
             [sty.root___focusVisibleWithin]: triggers.focusVisibleWithin_root,

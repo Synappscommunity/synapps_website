@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -24,6 +23,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import * as pp from "@plasmicapp/react-web";
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: gLnoj82AzKVVT7qXiqAbHD/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: gLnoj82AzKVVT7qXiqAbHD/projectcss
 import sty from "./PlasmicButton.module.css"; // plasmic-import: lBHNzts6tFyj/css
@@ -134,21 +134,20 @@ function PlasmicButton__RenderFunc(props) {
   const triggers = {
     focusVisibleWithin_root: isRootFocusVisibleWithin
   };
+  const styleTokensClassNames = _useStyleTokens();
   return (
-    <Stack__
-      as={"button"}
+    <button
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.button,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
+        styleTokensClassNames,
         sty.root,
         {
           [sty.root___focusVisibleWithin]: triggers.focusVisibleWithin_root,
@@ -510,7 +509,7 @@ function PlasmicButton__RenderFunc(props) {
           })}
         </div>
       ) : null}
-    </Stack__>
+    </button>
   );
 }
 

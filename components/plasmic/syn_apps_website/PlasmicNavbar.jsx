@@ -11,19 +11,18 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   hasVariant
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Logo from "../../Logo"; // plasmic-import: sRn2-bHz6HgN/component
 import Button from "../../Button"; // plasmic-import: qDkIQgIGzzHX/component
-import { useScreenVariants as useScreenVariantsunNaIs43VvNf } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: UNNaIS43VvNF/globalVariant
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicNavbar.module.css"; // plasmic-import: JlZE_UpCnEsq/css
 
@@ -62,32 +61,27 @@ function PlasmicNavbar__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsunNaIs43VvNf()
-  });
+  const globalVariants = _useGlobalVariants();
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless,
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__cUmmR)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__cUmmR)}>
         <Logo
           data-plasmic-name={"logo"}
           data-plasmic-override={overrides.logo}
@@ -97,11 +91,7 @@ function PlasmicNavbar__RenderFunc(props) {
           }
         />
 
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__lyfoh)}
-        >
+        <div className={classNames(projectcss.all, sty.freeBox__lyfoh)}>
           {false ? (
             <Button
               className={classNames("__wab_instance", sty.button___9W8Ui)}
@@ -213,12 +203,8 @@ function PlasmicNavbar__RenderFunc(props) {
               </div>
             </Button>
           ) : null}
-        </Stack__>
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__aWzS)}
-        >
+        </div>
+        <div className={classNames(projectcss.all, sty.freeBox__aWzS)}>
           <Button
             className={classNames("__wab_instance", sty.button__s92YV)}
             color={"navLink"}
@@ -294,9 +280,9 @@ function PlasmicNavbar__RenderFunc(props) {
               }
             </div>
           </Button>
-        </Stack__>
-      </Stack__>
-    </Stack__>
+        </div>
+      </div>
+    </div>
   );
 }
 

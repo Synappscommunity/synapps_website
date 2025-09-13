@@ -13,54 +13,21 @@
   position: relative;
   flex-direction: row;
   width: 100%;
-  height: auto;
-  min-width: 0;
-}
-.section1 > :global(.__wab_flex-container) {
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
   align-content: center;
   justify-content: center;
+  height: auto;
+  column-gap: 52px;
   min-width: 0;
-  margin-left: calc(0px - 52px);
-  width: calc(100% + 52px);
-}
-.section1 > :global(.__wab_flex-container) > *,
-.section1 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.section1 > :global(.__wab_flex-container) > picture > img,
-.section1
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 52px;
 }
 @media (max-width: 760px) {
   .section1 {
     display: flex;
     flex-direction: column;
-  }
-}
-@media (max-width: 760px) {
-  .section1 > :global(.__wab_flex-container) {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: calc(0px - 0px);
-    width: calc(100% + 0px);
-  }
-}
-@media (max-width: 760px) {
-  .section1 > :global(.__wab_flex-container) > *,
-  .section1 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-  .section1 > :global(.__wab_flex-container) > picture > img,
-  .section1
-    > :global(.__wab_flex-container)
-    > :global(.__wab_slot)
-    > picture
-    > img {
-    margin-left: 0px;
+    column-gap: 0px;
   }
 }
 .footerLogoSocialPhone {

@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -21,8 +20,9 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { BaseButton } from "@plasmicpkgs/react-aria/skinny/registerButton";
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicButton2.module.css"; // plasmic-import: nCt4jFntNzpF/css
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: bV5FzCtGiJvd/icon
@@ -134,6 +134,9 @@ function PlasmicButton2__RenderFunc(props) {
     $queries: {},
     $refs
   });
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   const [$ccVariants, setDollarCcVariants] = React.useState({
     hovered: false,
     pressed: false,
@@ -161,8 +164,8 @@ function PlasmicButton2__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless,
         sty.root,
         {
           [sty.rootcolor_errorDestructive]: hasVariant(
@@ -379,9 +382,7 @@ function PlasmicButton2__RenderFunc(props) {
         }
       />
 
-      <Stack__
-        as={"div"}
-        hasGap={true}
+      <div
         className={classNames(projectcss.all, sty.freeBox___0Glbk, {
           [sty.freeBoxcolor_neutral___0Glbkhk8Ym]: hasVariant(
             $state,
@@ -795,7 +796,7 @@ function PlasmicButton2__RenderFunc(props) {
             })
           })}
         </div>
-      </Stack__>
+      </div>
     </BaseButton>
   );
 }

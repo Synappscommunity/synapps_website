@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -28,8 +27,9 @@ import Button2 from "../../Button2"; // plasmic-import: nCt4jFntNzpF/component
 import { BaseModal } from "@plasmicpkgs/react-aria/skinny/registerModal";
 import { BaseDialog } from "@plasmicpkgs/react-aria/skinny/registerDialog";
 import { BaseHeading } from "@plasmicpkgs/react-aria/skinny/registerHeading";
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicModal.module.css"; // plasmic-import: 00eWS0fclycn/css
 
@@ -115,6 +115,9 @@ function PlasmicModal__RenderFunc(props) {
     $queries: {},
     $refs
   });
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   return (
     <BaseDialogTrigger
       data-plasmic-name={"ariaDialogTrigger"}
@@ -126,8 +129,8 @@ function PlasmicModal__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless,
         sty.ariaDialogTrigger,
         {
           [sty.ariaDialogTriggernoTrigger]: hasVariant(
@@ -169,8 +172,8 @@ function PlasmicModal__RenderFunc(props) {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
-            projectcss.plasmic_tokens,
-            plasmic_antd_5_hostless_css.plasmic_tokens
+            styleTokensClassNames,
+            styleTokensClassNames_antd_5_hostless
           )}
         >
           <BaseDialog
@@ -214,9 +217,7 @@ function PlasmicModal__RenderFunc(props) {
             >
               {renderPlasmicSlot({
                 defaultContents: (
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__geubl)}
                   >
                     <div
@@ -239,7 +240,7 @@ function PlasmicModal__RenderFunc(props) {
                         "You can put anything here!\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                       }
                     </div>
-                  </Stack__>
+                  </div>
                 ),
 
                 value: args.content

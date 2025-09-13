@@ -14,11 +14,9 @@ import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   generateStateOnChangeProp,
   generateStateValueProp,
   hasVariant,
@@ -27,9 +25,10 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Button from "../../Button"; // plasmic-import: qDkIQgIGzzHX/component
 import TextInput from "../../TextInput"; // plasmic-import: H5mAYWyWYBfw/component
-import { useScreenVariants as useScreenVariantsunNaIs43VvNf } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: UNNaIS43VvNF/globalVariant
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicFooterSection.module.css"; // plasmic-import: 9AUvb_VWiKJR/css
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: jjQ9fZu8jJX0/icon
@@ -72,6 +71,7 @@ function PlasmicFooterSection__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -90,9 +90,9 @@ function PlasmicFooterSection__RenderFunc(props) {
     $queries: {},
     $refs
   });
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsunNaIs43VvNf()
-  });
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   return (
     <div
       data-plasmic-name={"root"}
@@ -104,16 +104,14 @@ function PlasmicFooterSection__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless,
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"section1"}
         data-plasmic-override={overrides.section1}
-        hasGap={true}
         className={classNames(projectcss.all, sty.section1)}
       >
         <div
@@ -179,7 +177,7 @@ function PlasmicFooterSection__RenderFunc(props) {
                     fontWeight: 700
                   }}
                 >
-                  {"09120767392"}
+                  {"09138603005"}
                 </span>
               </React.Fragment>
             </div>
@@ -492,7 +490,7 @@ function PlasmicFooterSection__RenderFunc(props) {
             </div>
           </Button>
         </div>
-      </Stack__>
+      </div>
       <div
         data-plasmic-name={"section2"}
         data-plasmic-override={overrides.section2}

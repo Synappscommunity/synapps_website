@@ -13,11 +13,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   generateStateOnChangeProp,
   generateStateValueProp,
   hasVariant,
@@ -33,9 +31,10 @@ import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu";
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu";
 import TextInput from "../../TextInput"; // plasmic-import: H5mAYWyWYBfw/component
 import { DataFetcher } from "@plasmicpkgs/plasmic-query";
-import { useScreenVariants as useScreenVariantsunNaIs43VvNf } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: UNNaIS43VvNF/globalVariant
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicAdminConsole.module.css"; // plasmic-import: ZllxQYrS4va2/css
 import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: WNXItNZeyPBz/icon
@@ -81,6 +80,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -111,9 +111,9 @@ function PlasmicAdminConsole__RenderFunc(props) {
     $queries: {},
     $refs
   });
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsunNaIs43VvNf()
-  });
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   return (
     <React.Fragment>
       <Head>
@@ -149,23 +149,17 @@ function PlasmicAdminConsole__RenderFunc(props) {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
-            projectcss.plasmic_tokens,
-            plasmic_antd_5_hostless_css.plasmic_tokens,
+            styleTokensClassNames,
+            styleTokensClassNames_antd_5_hostless,
             sty.root
           )}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
-            hasGap={true}
             className={classNames(projectcss.all, sty.header)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__yorP)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__yorP)}>
               <PlasmicImg__
                 data-plasmic-name={"img"}
                 data-plasmic-override={overrides.img}
@@ -216,9 +210,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
               {(
                 hasVariant(globalVariants, "screen", "mobile") ? false : true
               ) ? (
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
+                <div
                   className={classNames(projectcss.all, sty.freeBox__as19T)}
                 />
               ) : null}
@@ -282,12 +274,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   role={"img"}
                 />
               </div>
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"mobileMenu"}
               data-plasmic-override={overrides.mobileMenu}
-              hasGap={true}
               className={classNames(projectcss.all, sty.mobileMenu)}
             >
               <Icons8CloseSvgIcon
@@ -452,13 +442,11 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   </div>
                 </AntdMenuItem>
               </AntdMenu>
-            </Stack__>
-          </Stack__>
-          <Stack__
-            as={"div"}
+            </div>
+          </div>
+          <div
             data-plasmic-name={"inputStack"}
             data-plasmic-override={overrides.inputStack}
-            hasGap={true}
             className={classNames(projectcss.all, sty.inputStack)}
           >
             <div
@@ -611,7 +599,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                 {"\u0648\u0631\u0648\u062f"}
               </div>
             </Button>
-          </Stack__>
+          </div>
           <DataFetcher
             data-plasmic-name={"getSubscriptionDetail"}
             data-plasmic-override={overrides.getSubscriptionDetail}
@@ -663,11 +651,9 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.freeBox__myxnz)}
                       dir={"rtl"}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"hospitalName"}
                         data-plasmic-override={overrides.hospitalName}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.hospitalName)}
                       >
                         <div
@@ -718,12 +704,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
                             })()}
                           </React.Fragment>
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"hospitalSize"}
                         data-plasmic-override={overrides.hospitalSize}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.hospitalSize)}
                       >
                         <div
@@ -780,12 +764,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
                             })()}
                           </React.Fragment>
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"subscriptionState"}
                         data-plasmic-override={overrides.subscriptionState}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.subscriptionState
@@ -840,12 +822,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
                             })()}
                           </React.Fragment>
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"paymentState"}
                         data-plasmic-override={overrides.paymentState}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.paymentState)}
                       >
                         <div
@@ -901,14 +881,12 @@ function PlasmicAdminConsole__RenderFunc(props) {
                             })()}
                           </React.Fragment>
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"subscriptionExpirationDate"}
                         data-plasmic-override={
                           overrides.subscriptionExpirationDate
                         }
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.subscriptionExpirationDate
@@ -981,12 +959,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
                             })()}
                           </React.Fragment>
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"appUrl"}
                         data-plasmic-override={overrides.appUrl}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.appUrl)}
                       >
                         <div
@@ -1066,12 +1042,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         >
                           {"\u06a9\u0644\u06cc\u06a9 \u06a9\u0646\u06cc\u062f"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"adminpanelUrl"}
                         data-plasmic-override={overrides.adminpanelUrl}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.adminpanelUrl
@@ -1154,7 +1128,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         >
                           {"\u06a9\u0644\u06cc\u06a9 \u06a9\u0646\u06cc\u062f"}
                         </div>
-                      </Stack__>
+                      </div>
                     </div>
                   ) : null}
                   {(() => {
@@ -1266,11 +1240,9 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         const currentItem = __plasmic_item_0;
                         const currentIndex = __plasmic_idx_0;
                         return (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"paymentDetails"}
                             data-plasmic-override={overrides.paymentDetails}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.paymentDetails
@@ -1520,7 +1492,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                                 "\u062f\u0627\u0646\u0644\u0648\u062f \u0641\u0627\u06cc\u0644"
                               }
                             </div>
-                          </Stack__>
+                          </div>
                         );
                       })}
                     </div>

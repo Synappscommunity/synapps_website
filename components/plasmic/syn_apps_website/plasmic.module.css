@@ -401,6 +401,8 @@
   background: none;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  row-gap: 0px;
+  column-gap: 0px;
   box-shadow: none;
   box-sizing: border-box;
   text-decoration-line: none;
@@ -414,6 +416,8 @@
   background: none;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  row-gap: 0px;
+  column-gap: 0px;
   box-shadow: none;
   box-sizing: border-box;
   margin: 0;
@@ -864,7 +868,7 @@ ol:where(.root_reset_tags) {
   padding-left: var(--mixin-TSSGtrJG-LI-_padding-left);
   position: var(--mixin-TSSGtrJG-LI-_position);
   list-style-type: var(--mixin-TSSGtrJG-LI-_list-style-type);
-  flex-column-gap: var(--mixin-TSSGtrJG-LI-_flex-column-gap);
+  column-gap: var(--mixin-TSSGtrJG-LI-_column-gap);
 }
 
 :where(.root_reset) ul:where(.ul),
@@ -880,7 +884,7 @@ ul:where(.root_reset_tags) {
   padding-left: var(--mixin-nE5JgFH9x0il_padding-left);
   position: var(--mixin-nE5JgFH9x0il_position);
   list-style-type: var(--mixin-nE5JgFH9x0il_list-style-type);
-  flex-column-gap: var(--mixin-nE5JgFH9x0il_flex-column-gap);
+  column-gap: var(--mixin-nE5JgFH9x0il_column-gap);
 }
 
 :where(.root_reset) h2:where(.h2),

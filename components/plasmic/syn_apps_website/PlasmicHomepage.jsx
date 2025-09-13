@@ -13,11 +13,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   generateOnMutateForSpec,
   generateStateOnChangeProp,
   generateStateOnChangePropForCodeComponents,
@@ -45,9 +43,10 @@ import FooterSection from "../../FooterSection"; // plasmic-import: 9AUvb_VWiKJR
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { DataFetcher } from "@plasmicpkgs/plasmic-query";
-import { useScreenVariants as useScreenVariantsunNaIs43VvNf } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: UNNaIS43VvNF/globalVariant
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: 3jCrQ0KfPvDq/css
 import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: WNXItNZeyPBz/icon
@@ -92,6 +91,7 @@ function PlasmicHomepage__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -261,9 +261,9 @@ function PlasmicHomepage__RenderFunc(props) {
     $queries: {},
     $refs
   });
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsunNaIs43VvNf()
-  });
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
   return (
     <React.Fragment>
       <Head>
@@ -329,23 +329,17 @@ function PlasmicHomepage__RenderFunc(props) {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
-            projectcss.plasmic_tokens,
-            plasmic_antd_5_hostless_css.plasmic_tokens,
+            styleTokensClassNames,
+            styleTokensClassNames_antd_5_hostless,
             sty.pageContent
           )}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
-            hasGap={true}
             className={classNames(projectcss.all, sty.header)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___7Tuf)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox___7Tuf)}>
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__aIcf7)}
@@ -396,11 +390,7 @@ function PlasmicHomepage__RenderFunc(props) {
               {(
                 hasVariant(globalVariants, "screen", "mobile") ? false : true
               ) ? (
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__fqEbd)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__fqEbd)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -699,7 +689,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       </React.Fragment>
                     </div>
                   </Button>
-                </Stack__>
+                </div>
               ) : null}
               {false ? (
                 <div className={classNames(projectcss.all, sty.freeBox__zbVym)}>
@@ -798,7 +788,7 @@ function PlasmicHomepage__RenderFunc(props) {
                   role={"img"}
                 />
               </div>
-            </Stack__>
+            </div>
             {(
               hasVariant(globalVariants, "screen", "mobile")
                 ? (() => {
@@ -816,11 +806,9 @@ function PlasmicHomepage__RenderFunc(props) {
                   })()
                 : true
             ) ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"mobileMenu"}
                 data-plasmic-override={overrides.mobileMenu}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu)}
               >
                 <Icons8CloseSvgIcon
@@ -1399,9 +1387,9 @@ function PlasmicHomepage__RenderFunc(props) {
                     </div>
                   </AntdMenuItem>
                 </AntdMenu>
-              </Stack__>
+              </div>
             ) : null}
-          </Stack__>
+          </div>
           <div
             data-plasmic-name={"section1Header"}
             data-plasmic-override={overrides.section1Header}
@@ -1523,11 +1511,9 @@ function PlasmicHomepage__RenderFunc(props) {
                     </React.Fragment>
                   )}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"actionButton"}
                   data-plasmic-override={overrides.actionButton}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.actionButton)}
                 >
                   {(
@@ -1554,9 +1540,9 @@ function PlasmicHomepage__RenderFunc(props) {
                       </div>
                     </Button>
                   ) : null}
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__rijN)}>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__xyXap)}
                   >
                     <Button
@@ -1597,7 +1583,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             style={{ fontWeight: 600 }}
                           >
                             {
-                              "\u062a\u0633\u062a \u06a9\u0646\u064a\u062f (Demo)"
+                              "\u062a\u0633\u062a \u06a9\u0646\u064a\u062f (\u0647\u0645\u064a\u0646 \u062d\u0627\u0644\u0627 \u0648 \u0631\u0627\u064a\u06af\u0627\u0646)"
                             }
                           </span>
                         </React.Fragment>
@@ -1624,8 +1610,52 @@ function PlasmicHomepage__RenderFunc(props) {
                         </span>
                       </React.Fragment>
                     </div>
-                  </Stack__>
-                </Stack__>
+                  </div>
+                  <Button
+                    data-plasmic-name={
+                      "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc9"
+                    }
+                    data-plasmic-override={overrides.درخواستراهاندازی9}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.درخواستراهاندازی9
+                    )}
+                    color={"blue"}
+                    link={
+                      "https://drive.google.com/file/d/1rfhudCKZMna8nA-K8z7O_GbD9yFcKUeK/view?usp=sharing"
+                    }
+                    startIcon={
+                      <svg
+                        className={classNames(projectcss.all, sty.svg___9PiL)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={false}
+                    target={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__jG6
+                      )}
+                      dir={"rtl"}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ fontWeight: 600 }}
+                        >
+                          {
+                            "\u06a9\u0627\u062a\u0627\u0644\u0648\u06af \u0627\u06cc\u0646\u0644\u0628"
+                          }
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -1639,31 +1669,21 @@ function PlasmicHomepage__RenderFunc(props) {
                 : "fullContentWidth"
             }
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__yUaDs)}
-            >
-              <Stack__
-                as={"div"}
+            <div className={classNames(projectcss.all, sty.freeBox__yUaDs)}>
+              <div
                 data-plasmic-name={"gifLab"}
                 data-plasmic-override={overrides.gifLab}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.gifLab)}
               >
                 {(
                   hasVariant(globalVariants, "screen", "mobile") ? true : false
                 ) ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"actionButtons6"}
                     data-plasmic-override={overrides.actionButtons6}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.actionButtons6)}
                   >
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(
                         projectcss.all,
                         sty.freeBox___9A6EG
@@ -1737,8 +1757,8 @@ function PlasmicHomepage__RenderFunc(props) {
                           </span>
                         </React.Fragment>
                       </div>
-                    </Stack__>
-                  </Stack__>
+                    </div>
+                  </div>
                 ) : null}
                 <PlasmicImg__
                   alt={""}
@@ -1828,16 +1848,12 @@ function PlasmicHomepage__RenderFunc(props) {
                       ? false
                       : true
                   ) ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"actionButtons4"}
                       data-plasmic-override={overrides.actionButtons4}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.actionButtons4)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox___6R27O
@@ -1911,16 +1927,14 @@ function PlasmicHomepage__RenderFunc(props) {
                             </span>
                           </React.Fragment>
                         </div>
-                      </Stack__>
-                    </Stack__>
+                      </div>
+                    </div>
                   ) : null}
                 </div>
-              </Stack__>
-              <Stack__
-                as={"div"}
+              </div>
+              <div
                 data-plasmic-name={"gifRadio"}
                 data-plasmic-override={overrides.gifRadio}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.gifRadio)}
               >
                 <div
@@ -1980,16 +1994,12 @@ function PlasmicHomepage__RenderFunc(props) {
                       ? false
                       : true
                   ) ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"actionButtons"}
                       data-plasmic-override={overrides.actionButtons}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.actionButtons)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__m3E12
@@ -2063,8 +2073,8 @@ function PlasmicHomepage__RenderFunc(props) {
                             </span>
                           </React.Fragment>
                         </div>
-                      </Stack__>
-                    </Stack__>
+                      </div>
+                    </div>
                   ) : null}
                 </div>
                 <PlasmicImg__
@@ -2092,16 +2102,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 {(
                   hasVariant(globalVariants, "screen", "mobile") ? true : false
                 ) ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"actionButtons5"}
                     data-plasmic-override={overrides.actionButtons5}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.actionButtons5)}
                   >
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__vDthy)}
                     >
                       <Button
@@ -2172,11 +2178,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           </span>
                         </React.Fragment>
                       </div>
-                    </Stack__>
-                  </Stack__>
+                    </div>
+                  </div>
                 ) : null}
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
           </Section>
           <Section
             data-plasmic-name={"section3Userbase"}
@@ -2188,11 +2194,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 : "fullContentWidth"
             }
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__hebP)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__hebP)}>
               <h2
                 className={classNames(
                   projectcss.all,
@@ -2311,9 +2313,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       "Our design partners include the world\u2019s leading product-led companies"
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox___4Nwpf)}
                   >
                     <PlasmicImg__
@@ -2387,7 +2387,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         aspectRatio: undefined
                       }}
                     />
-                  </Stack__>
+                  </div>
                 </div>
               ) : null}
               <div
@@ -2395,20 +2395,16 @@ function PlasmicHomepage__RenderFunc(props) {
                 data-plasmic-override={overrides.customersStack}
                 className={classNames(projectcss.all, sty.customersStack)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"customersList"}
                   data-plasmic-override={overrides.customersList}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.customersList)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={
                       "\u0645\u0631\u06a9\u0632\u0637\u0628\u06cc\u06a9\u0648\u062f\u06a9\u0627\u0646"
                     }
                     data-plasmic-override={overrides.مرکزطبیکودکان}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.مرکزطبیکودکان)}
                   >
                     <div
@@ -2422,9 +2418,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0645\u0631\u06a9\u0632 \u0637\u0628\u06cc \u06a9\u0648\u062f\u06a9\u0627\u0646"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__f4OH7)}
                     >
                       <div
@@ -2449,13 +2443,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f3\u06f9\u06f8"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0633\u06cc\u0646\u0627"}
                     data-plasmic-override={overrides.سینا}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.سینا)}
                   >
                     <div
@@ -2469,9 +2461,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0633\u064a\u0646\u0627"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__o9D4Q)}
                     >
                       <div
@@ -2496,15 +2486,13 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f3\u06f9\u06f9"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={
                       "\u0627\u0645\u0627\u0645\u062e\u0645\u06cc\u0646\u06cc"
                     }
                     data-plasmic-override={overrides.امامخمینی}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.امامخمینی)}
                   >
                     <div
@@ -2518,9 +2506,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0627\u0645\u0627\u0645 \u062e\u0645\u064a\u0646\u06cc (\u0631\u0647)"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__mwI4J)}
                     >
                       <div
@@ -2545,15 +2531,13 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={
                       "\u0645\u0631\u06a9\u0632\u0642\u0644\u0628"
                     }
                     data-plasmic-override={overrides.مرکزقلب}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.مرکزقلب)}
                   >
                     <div
@@ -2567,9 +2551,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0645\u0631\u06a9\u0632 \u0642\u0644\u0628 \u062a\u0647\u0631\u0627\u0646"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__q1ZmW)}
                     >
                       <div
@@ -2594,13 +2576,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f3"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0634\u0631\u06cc\u0639\u062a\u06cc"}
                     data-plasmic-override={overrides.شریعتی}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.شریعتی)}
                   >
                     <div
@@ -2614,9 +2594,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0634\u0631\u064a\u0639\u062a\u06cc"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__eJOxc)}
                     >
                       <div
@@ -2641,15 +2619,13 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={
                       "\u0627\u0645\u06cc\u0631\u0627\u0639\u0644\u0645"
                     }
                     data-plasmic-override={overrides.امیراعلم}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.امیراعلم)}
                   >
                     <div
@@ -2663,9 +2639,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0627\u0645\u064a\u0631\u0627\u0639\u0644\u0645"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__fdRuc)}
                     >
                       <div
@@ -2690,13 +2664,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0622\u0631\u0634"}
                     data-plasmic-override={overrides.آرش}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.آرش)}
                   >
                     <div
@@ -2710,9 +2682,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0622\u0631\u0634"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__vqHdh)}
                     >
                       <div
@@ -2737,13 +2707,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0641\u0627\u0631\u0627\u0628\u06cc"}
                     data-plasmic-override={overrides.فارابی}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.فارابی)}
                   >
                     <div
@@ -2757,9 +2725,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0641\u0627\u0631\u0627\u0628\u06cc"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__a4MSt)}
                     >
                       <div
@@ -2784,13 +2750,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0631\u0627\u0632\u06cc"}
                     data-plasmic-override={overrides.رازی}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.رازی)}
                   >
                     <div
@@ -2804,9 +2768,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0631\u0627\u0632\u06cc"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__mkYm7)}
                     >
                       <div
@@ -2831,13 +2793,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0628\u0647\u0627\u0631\u0644\u0648"}
                     data-plasmic-override={overrides.بهارلو}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.بهارلو)}
                   >
                     <div
@@ -2851,9 +2811,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0628\u0647\u0627\u0631\u0644\u0648"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__izfwR)}
                     >
                       <div
@@ -2878,13 +2836,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0631\u0648\u0632\u0628\u0647"}
                     data-plasmic-override={overrides.روزبه}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.روزبه)}
                   >
                     <div
@@ -2898,9 +2854,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0631\u0648\u0632\u0628\u0647"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__c5Plo)}
                     >
                       <div
@@ -2925,15 +2879,13 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={
                       "\u0636\u06cc\u0627\u0626\u06cc\u0627\u0646"
                     }
                     data-plasmic-override={overrides.ضیائیان}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.ضیائیان)}
                   >
                     <div
@@ -2947,9 +2899,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0636\u064a\u0627\u0626\u064a\u0627\u0646"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__yetqn)}
                     >
                       <div
@@ -2974,13 +2924,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u0628\u0647\u0631\u0627\u0645\u06cc"}
                     data-plasmic-override={overrides.بهرامی}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.بهرامی)}
                   >
                     <div
@@ -2994,9 +2942,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u0628\u0647\u0631\u0627\u0645\u06cc"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__g4Yk)}
                     >
                       <div
@@ -3021,13 +2967,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u062d\u06a9\u06cc\u0645"}
                     data-plasmic-override={overrides.حکیم}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.حکیم)}
                   >
                     <div
@@ -3041,9 +2985,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u062d\u06a9\u064a\u0645"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__vCk06)}
                     >
                       <div
@@ -3068,13 +3010,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"\u06cc\u0627\u0633"}
                     data-plasmic-override={overrides.یاس}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.یاس)}
                   >
                     <div
@@ -3088,9 +3028,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         "\u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u064a\u0627\u0633"
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__zbym0)}
                     >
                       <div
@@ -3115,11 +3053,11 @@ function PlasmicHomepage__RenderFunc(props) {
                           "\u0627\u0632 \u0633\u0627\u0644 \u06f1\u06f4\u06f0\u06f1"
                         }
                       </div>
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </Stack__>
+            </div>
           </Section>
           <Section
             data-plasmic-name={"section4WallOfLove"}
@@ -3127,11 +3065,7 @@ function PlasmicHomepage__RenderFunc(props) {
             className={classNames("__wab_instance", sty.section4WallOfLove)}
             size={"fullContentWidth"}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__akYh)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__akYh)}>
               <h2
                 Id={"\u062f\u064a\u0648\u0627\u0631 \u0639\u0634\u0642"}
                 className={classNames(
@@ -3180,11 +3114,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 data-plasmic-override={overrides.loveContents}
                 className={classNames(projectcss.all, sty.loveContents)}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__jON3)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__jON3)}>
                   {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                     (() => {
                       try {
@@ -3416,9 +3346,9 @@ function PlasmicHomepage__RenderFunc(props) {
                       </div>
                     );
                   })}
-                </Stack__>
+                </div>
               </div>
-            </Stack__>
+            </div>
           </Section>
           <Section
             data-plasmic-name={"section5Price"}
@@ -3467,13 +3397,11 @@ function PlasmicHomepage__RenderFunc(props) {
                   </React.Fragment>
                 </React.Fragment>
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={
                   "\u067e\u0644\u0646\u0647\u0627\u06cc\u0642\u06cc\u0645\u062a"
                 }
                 data-plasmic-override={overrides.پلنهایقیمت}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.پلنهایقیمت)}
               >
                 <div
@@ -4933,19 +4861,13 @@ function PlasmicHomepage__RenderFunc(props) {
                     </div>
                   ) : null}
                 </div>
-              </Stack__>
-              <Stack__
-                as={"div"}
+              </div>
+              <div
                 data-plasmic-name={"actionButtons2"}
                 data-plasmic-override={overrides.actionButtons2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.actionButtons2)}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__wwVu)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__wwVu)}>
                   <Button
                     data-plasmic-name={
                       "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc4"
@@ -5007,8 +4929,8 @@ function PlasmicHomepage__RenderFunc(props) {
                       </span>
                     </React.Fragment>
                   </div>
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </div>
           </Section>
           <Section
@@ -5038,11 +4960,9 @@ function PlasmicHomepage__RenderFunc(props) {
                   "\u0633\u0648\u0627\u0644\u0627\u062a \u0634\u0627\u06cc\u0639"
                 }
               </h2>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"faqCategories"}
                 data-plasmic-override={overrides.faqCategories}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.faqCategories)}
               >
                 <FaqTab
@@ -5420,7 +5340,7 @@ function PlasmicHomepage__RenderFunc(props) {
                     }
                   </div>
                 </FaqTab>
-              </Stack__>
+              </div>
               {(() => {
                 try {
                   return $state.faqSelectedTab === "نصب و راه اندازي";
@@ -5617,6 +5537,17 @@ function PlasmicHomepage__RenderFunc(props) {
                                 >
                                   {
                                     "\ud83d\udca0\u062a\u064a\u0631\u0627\u0698\u0647 : 2 \u0633\u0627\u0639\u062a"
+                                  }
+                                </span>
+                                <React.Fragment>{"\n"}</React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 600 }}
+                                >
+                                  {
+                                    "\ud83d\udca0\u0637\u0628 \u0648 \u0631\u0627\u06cc\u0627\u0646\u0647 : 2 \u0633\u0627\u0639\u062a"
                                   }
                                 </span>
                                 <React.Fragment>{"\n"}</React.Fragment>
@@ -6459,18 +6390,12 @@ function PlasmicHomepage__RenderFunc(props) {
                     );
                   })()
                 : null}
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"actionButtons3"}
                 data-plasmic-override={overrides.actionButtons3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.actionButtons3)}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__ttc5E)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__ttc5E)}>
                   <Button
                     data-plasmic-name={
                       "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc5"
@@ -6532,14 +6457,12 @@ function PlasmicHomepage__RenderFunc(props) {
                       </span>
                     </React.Fragment>
                   </div>
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
               {false ? (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"flow"}
                   data-plasmic-override={overrides.flow}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.flow)}
                 >
                   <div
@@ -6583,21 +6506,17 @@ function PlasmicHomepage__RenderFunc(props) {
                       }}
                     />
 
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(
                         projectcss.all,
                         sty.freeBox___3BcIy
                       )}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={
                           "\u062a\u0637\u0627\u0628\u0642\u0628\u0627\u062a\u0645\u0627\u0645His\u0647\u0627"
                         }
                         data-plasmic-override={overrides.تطابقباتمامHisها}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.تطابقباتمامHisها
@@ -6646,14 +6565,12 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0627\u062a\u0635\u0627\u0644\u0628\u0647\u062f\u06cc\u062a\u0627\u0628\u06cc\u0633"
                         }
                         data-plasmic-override={overrides.اتصالبهدیتابیس}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.اتصالبهدیتابیس
@@ -6701,14 +6618,12 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0628\u0631\u0631\u0648\u06cc\u0633\u0631\u0648\u0631\u0628\u06cc\u0645\u0627\u0631\u0633\u062a\u0627\u0646"
                         }
                         data-plasmic-override={overrides.بررویسروربیمارستان}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.بررویسروربیمارستان
@@ -6755,14 +6670,12 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0635\u0631\u0641\u0627\u062f\u0633\u062a\u0631\u0633\u06cc\u062e\u0648\u0627\u0646\u062f\u0646"
                         }
                         data-plasmic-override={overrides.صرفادسترسیخواندن}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.صرفادسترسیخواندن
@@ -6809,14 +6722,12 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0628\u062f\u0648\u0646\u0646\u06cc\u0627\u0632\u0628\u0647\u062f\u0633\u062a\u0631\u0633\u06cc\u0646\u0648\u0634\u062a\u0646"
                         }
                         data-plasmic-override={overrides.بدوننیازبهدسترسینوشتن}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.بدوننیازبهدسترسینوشتن
@@ -6863,16 +6774,14 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0627\u0646\u062c\u0627\u0645\u0627\u0645\u0648\u0631\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc\u062a\u0648\u0633\u0637\u0633\u06cc\u0646\u0627\u067e\u0633"
                         }
                         data-plasmic-override={
                           overrides.انجامامورراهاندازیتوسطسیناپس
                         }
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.انجامامورراهاندازیتوسطسیناپس
@@ -6919,14 +6828,12 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0627\u062a\u0635\u0627\u0644\u0628\u0627Api"
                         }
                         data-plasmic-override={overrides.اتصالباApi}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.اتصالباApi)}
                         onClick={async event => {
                           const $steps = {};
@@ -7058,8 +6965,8 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
-                    </Stack__>
+                      </div>
+                    </div>
                     <Button
                       data-plasmic-name={
                         "\u0645\u0637\u0627\u0644\u0639\u0647\u0628\u06cc\u0634\u062a\u0631"
@@ -7156,13 +7063,11 @@ function PlasmicHomepage__RenderFunc(props) {
                     <div
                       className={classNames(projectcss.all, sty.freeBox__syL5O)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={
                           "\u0628\u0647\u0635\u0648\u0631\u062a\u06cc\u06a9\u062c\u0627"
                         }
                         data-plasmic-override={overrides.بهصورتیکجا}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.بهصورتیکجا)}
                       >
                         <div
@@ -7194,14 +7099,12 @@ function PlasmicHomepage__RenderFunc(props) {
                             aspectRatio: 1
                           }}
                         />
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0646\u0642\u0634\u0647\u0627\u06cc\u0645\u062a\u0646\u0648\u0639"
                         }
                         data-plasmic-override={overrides.نقشهایمتنوع}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.نقشهایمتنوع)}
                       >
                         <div
@@ -7232,14 +7135,12 @@ function PlasmicHomepage__RenderFunc(props) {
                             aspectRatio: 1
                           }}
                         />
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0633\u0637\u0648\u062d\u062f\u0633\u062a\u0631\u0633\u06cc"
                         }
                         data-plasmic-override={overrides.سطوحدسترسی}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.سطوحدسترسی)}
                       >
                         <div
@@ -7270,16 +7171,14 @@ function PlasmicHomepage__RenderFunc(props) {
                             aspectRatio: 1
                           }}
                         />
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={
                           "\u0628\u062f\u0648\u0646\u0646\u06cc\u0627\u0632\u0628\u0647\u0622\u0645\u0648\u0632\u0634\u0628\u0647\u06a9\u0627\u0631\u0628\u0631\u0627\u0646"
                         }
                         data-plasmic-override={
                           overrides.بدوننیازبهآموزشبهکاربران
                         }
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.بدوننیازبهآموزشبهکاربران
@@ -7326,7 +7225,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             }}
                           />
                         </div>
-                      </Stack__>
+                      </div>
                     </div>
                   </div>
                   <PlasmicImg__
@@ -7405,7 +7304,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       </React.Fragment>
                     </div>
                   </div>
-                </Stack__>
+                </div>
               ) : null}
             </div>
           </Section>
@@ -7443,9 +7342,7 @@ function PlasmicHomepage__RenderFunc(props) {
                   }
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__orzU)}>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__ywHqt)}
                   >
                     <div
@@ -7582,10 +7479,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         {"Automations"}
                       </h5>
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  </div>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__u5VvM)}
                   >
                     <div
@@ -7684,10 +7579,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         {"Security"}
                       </h5>
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  </div>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__jP7Mg)}
                   >
                     <div
@@ -7818,7 +7711,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         {"Protection"}
                       </h5>
                     </div>
-                  </Stack__>
+                  </div>
                   <Button
                     className={classNames("__wab_instance", sty.button__sbYr)}
                     color={"clear"}
@@ -8851,11 +8744,7 @@ function PlasmicHomepage__RenderFunc(props) {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
                   }
                 </div>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__spO8V)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__spO8V)}>
                   <TextInput
                     data-plasmic-name={"textInput"}
                     data-plasmic-override={overrides.textInput}
@@ -8899,7 +8788,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         : "Subscribe"}
                     </div>
                   </Button>
-                </Stack__>
+                </div>
               </div>
               <PlasmicImg__
                 alt={""}
@@ -8953,8 +8842,8 @@ function PlasmicHomepage__RenderFunc(props) {
               projectcss.root_reset,
               projectcss.plasmic_default_styles,
               projectcss.plasmic_mixins,
-              projectcss.plasmic_tokens,
-              plasmic_antd_5_hostless_css.plasmic_tokens
+              styleTokensClassNames,
+              styleTokensClassNames_antd_5_hostless
             )}
             hideFooter={true}
             maskClosable={true}
@@ -8967,11 +8856,7 @@ function PlasmicHomepage__RenderFunc(props) {
             }}
             open={generateStateValueProp($state, ["modalInlabLogin", "open"])}
             title={
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__tWg)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__tWg)}>
                 <Icons8CloseSvgIcon
                   className={classNames(projectcss.all, sty.svg___7Dtjr)}
                   onClick={async event => {
@@ -9069,7 +8954,7 @@ function PlasmicHomepage__RenderFunc(props) {
                     "\u0628\u06cc\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u062e\u0648\u062f \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f"
                   }
                 </div>
-              </Stack__>
+              </div>
             }
             trigger={null}
           >
@@ -9093,11 +8978,9 @@ function PlasmicHomepage__RenderFunc(props) {
             >
               <DataCtxReader__>
                 {$ctx => (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"hospitalsList"}
                     data-plasmic-override={overrides.hospitalsList}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.hospitalsList)}
                   >
                     {(_par =>
@@ -9212,7 +9095,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         </div>
                       );
                     })}
-                  </Stack__>
+                  </div>
                 )}
               </DataCtxReader__>
             </DataFetcher>
@@ -9243,6 +9126,7 @@ const PlasmicDescendants = {
     "content",
     "actionButton",
     "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2",
+    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc9",
     "section2Gifs",
     "gifLab",
     "actionButtons6",
@@ -9428,22 +9312,24 @@ const PlasmicDescendants = {
     "section1Header",
     "content",
     "actionButton",
-    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2"
+    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2",
+    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc9"
   ],
 
   content: [
     "content",
     "actionButton",
-    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2"
+    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2",
+    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc9"
   ],
 
-  actionButton: [
-    "actionButton",
-    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2"
-  ],
-
+  actionButton: ["actionButton"],
   درخواستراهاندازی2: [
     "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2"
+  ],
+
+  درخواستراهاندازی9: [
+    "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc9"
   ],
 
   section2Gifs: [
@@ -10066,6 +9952,9 @@ export const PlasmicHomepage = Object.assign(
     actionButton: makeNodeComponent("actionButton"),
     درخواستراهاندازی2: makeNodeComponent(
       "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2"
+    ),
+    درخواستراهاندازی9: makeNodeComponent(
+      "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc9"
     ),
     section2Gifs: makeNodeComponent("section2Gifs"),
     gifLab: makeNodeComponent("gifLab"),
