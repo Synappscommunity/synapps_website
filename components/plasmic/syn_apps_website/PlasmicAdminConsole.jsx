@@ -33,7 +33,6 @@ import TextInput from "../../TextInput"; // plasmic-import: H5mAYWyWYBfw/compone
 import { DataFetcher } from "@plasmicpkgs/plasmic-query";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicAdminConsole.module.css"; // plasmic-import: ZllxQYrS4va2/css
@@ -112,8 +111,6 @@ function PlasmicAdminConsole__RenderFunc(props) {
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   return (
     <React.Fragment>
       <Head>
@@ -150,7 +147,6 @@ function PlasmicAdminConsole__RenderFunc(props) {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             styleTokensClassNames,
-            styleTokensClassNames_antd_5_hostless,
             sty.root
           )}
         >
@@ -582,9 +578,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   typeof $steps["updateGetSubscriptionDetailLogin"].then ===
                     "function"
                 ) {
-                  $steps["updateGetSubscriptionDetailLogin"] = await $steps[
-                    "updateGetSubscriptionDetailLogin"
-                  ];
+                  $steps["updateGetSubscriptionDetailLogin"] =
+                    await $steps["updateGetSubscriptionDetailLogin"];
                 }
               }}
               submitsForm={false}
@@ -749,9 +744,9 @@ function PlasmicAdminConsole__RenderFunc(props) {
                                     .hospital_size === 3
                                     ? "بزرگ"
                                     : $ctx["GET subscription_detail_Data"][0]
-                                        .hospital_size === 2
-                                    ? "متوسط"
-                                    : "کوچک");
+                                          .hospital_size === 2
+                                      ? "متوسط"
+                                      : "کوچک");
                               } catch (e) {
                                 if (
                                   e instanceof TypeError ||

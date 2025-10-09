@@ -21,7 +21,6 @@ import Logo from "../../Logo"; // plasmic-import: sRn2-bHz6HgN/component
 import Button from "../../Button"; // plasmic-import: qDkIQgIGzzHX/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicNavbar.module.css"; // plasmic-import: JlZE_UpCnEsq/css
@@ -63,8 +62,6 @@ function PlasmicNavbar__RenderFunc(props) {
   const $refs = refsRef.current;
   const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   return (
     <div
       data-plasmic-name={"root"}
@@ -77,7 +74,6 @@ function PlasmicNavbar__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        styleTokensClassNames_antd_5_hostless,
         sty.root
       )}
     >

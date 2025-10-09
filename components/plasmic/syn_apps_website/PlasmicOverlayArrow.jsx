@@ -20,7 +20,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { BaseOverlayArrow } from "@plasmicpkgs/react-aria/skinny/registerOverlayArrow";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicOverlayArrow.module.css"; // plasmic-import: TmWqxKMkHHIo/css
@@ -80,8 +79,6 @@ function PlasmicOverlayArrow__RenderFunc(props) {
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   const [$ccVariants, setDollarCcVariants] = React.useState({
     placementTop: false,
     placementLeft: false,
@@ -107,7 +104,6 @@ function PlasmicOverlayArrow__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        styleTokensClassNames_antd_5_hostless,
         sty.root,
         { [sty.rootdark]: hasVariant($state, "dark", "dark") }
       )}

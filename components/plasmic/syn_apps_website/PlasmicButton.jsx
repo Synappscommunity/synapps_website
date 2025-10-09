@@ -23,7 +23,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import * as pp from "@plasmicapp/react-web";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicButton.module.css"; // plasmic-import: qDkIQgIGzzHX/css
@@ -170,8 +169,6 @@ function PlasmicButton__RenderFunc(props) {
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   return (
     <button
       data-plasmic-name={"root"}
@@ -185,7 +182,6 @@ function PlasmicButton__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        styleTokensClassNames_antd_5_hostless,
         sty.root,
         {
           [sty.rootbgDifference]: hasVariant(
@@ -246,10 +242,10 @@ function PlasmicButton__RenderFunc(props) {
         hasVariant($state, "iconOnly", "iconOnly")
           ? true
           : hasVariant($state, "color", "blue")
-          ? false
-          : hasVariant($state, "showStartIcon", "showStartIcon")
-          ? true
-          : false
+            ? false
+            : hasVariant($state, "showStartIcon", "showStartIcon")
+              ? true
+              : false
       )
         ? renderPlasmicSlot({
             defaultContents: (
@@ -452,10 +448,10 @@ function PlasmicButton__RenderFunc(props) {
         hasVariant($state, "iconOnly", "iconOnly")
           ? false
           : hasVariant($state, "showEndIcon", "showEndIcon")
-          ? true
-          : hasVariant($state, "showStartIcon", "showStartIcon")
-          ? false
-          : false
+            ? true
+            : hasVariant($state, "showStartIcon", "showStartIcon")
+              ? false
+              : false
       )
         ? renderPlasmicSlot({
             defaultContents: (

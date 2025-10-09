@@ -28,7 +28,6 @@ import { BaseModal } from "@plasmicpkgs/react-aria/skinny/registerModal";
 import { BaseDialog } from "@plasmicpkgs/react-aria/skinny/registerDialog";
 import { BaseHeading } from "@plasmicpkgs/react-aria/skinny/registerHeading";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicDrawer.module.css"; // plasmic-import: RfvNCco5N0To/css
@@ -118,8 +117,6 @@ function PlasmicDrawer__RenderFunc(props) {
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   return (
     <BaseDialogTrigger
       data-plasmic-name={"ariaDialogTrigger"}
@@ -132,7 +129,6 @@ function PlasmicDrawer__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        styleTokensClassNames_antd_5_hostless,
         sty.ariaDialogTrigger,
         {
           [sty.ariaDialogTriggernoTrigger]: hasVariant(
@@ -171,8 +167,7 @@ function PlasmicDrawer__RenderFunc(props) {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
-            styleTokensClassNames,
-            styleTokensClassNames_antd_5_hostless
+            styleTokensClassNames
           )}
         >
           <BaseDialog

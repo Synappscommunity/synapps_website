@@ -1600,9 +1600,10 @@
     ]
   },
   "wrapPagesWithGlobalContexts": true,
+  "preserveJsImportExtensions": false,
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.342",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.342/dist/plasmic.schema.json"
+  "cliVersion": "0.1.347",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.347/dist/plasmic.schema.json"
 }

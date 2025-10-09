@@ -27,7 +27,6 @@ import Button from "../../Button"; // plasmic-import: qDkIQgIGzzHX/component
 import TextInput from "../../TextInput"; // plasmic-import: H5mAYWyWYBfw/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicFooterSection.module.css"; // plasmic-import: 9AUvb_VWiKJR/css
@@ -91,8 +90,6 @@ function PlasmicFooterSection__RenderFunc(props) {
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   return (
     <div
       data-plasmic-name={"root"}
@@ -105,7 +102,6 @@ function PlasmicFooterSection__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        styleTokensClassNames_antd_5_hostless,
         sty.root
       )}
     >

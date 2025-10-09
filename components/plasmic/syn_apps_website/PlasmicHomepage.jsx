@@ -45,7 +45,6 @@ import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { DataFetcher } from "@plasmicpkgs/plasmic-query";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: 3jCrQ0KfPvDq/css
@@ -262,8 +261,6 @@ function PlasmicHomepage__RenderFunc(props) {
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   return (
     <React.Fragment>
       <Head>
@@ -330,7 +327,6 @@ function PlasmicHomepage__RenderFunc(props) {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             styleTokensClassNames,
-            styleTokensClassNames_antd_5_hostless,
             sty.pageContent
           )}
         >
@@ -434,9 +430,10 @@ function PlasmicHomepage__RenderFunc(props) {
                       ) {
                         $steps[
                           "goToHttpsDocsGoogleComDocumentD1Wk4LJdBc4B1CqrEmzb4UBfoaVzaeGqbo4MgSkj8Y2SwEditTabT0"
-                        ] = await $steps[
-                          "goToHttpsDocsGoogleComDocumentD1Wk4LJdBc4B1CqrEmzb4UBfoaVzaeGqbo4MgSkj8Y2SwEditTabT0"
-                        ];
+                        ] =
+                          await $steps[
+                            "goToHttpsDocsGoogleComDocumentD1Wk4LJdBc4B1CqrEmzb4UBfoaVzaeGqbo4MgSkj8Y2SwEditTabT0"
+                          ];
                       }
                     }}
                   >
@@ -592,9 +589,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["goToAdminConsole"] === "object" &&
                         typeof $steps["goToAdminConsole"].then === "function"
                       ) {
-                        $steps["goToAdminConsole"] = await $steps[
-                          "goToAdminConsole"
-                        ];
+                        $steps["goToAdminConsole"] =
+                          await $steps["goToAdminConsole"];
                       }
                     }}
                   >
@@ -640,9 +636,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateModalInlabLoginOpen"].then ===
                           "function"
                       ) {
-                        $steps["updateModalInlabLoginOpen"] = await $steps[
-                          "updateModalInlabLoginOpen"
-                        ];
+                        $steps["updateModalInlabLoginOpen"] =
+                          await $steps["updateModalInlabLoginOpen"];
                       }
                     }}
                   >
@@ -902,9 +897,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateMainMenu"] === "object" &&
                         typeof $steps["updateMainMenu"].then === "function"
                       ) {
-                        $steps["updateMainMenu"] = await $steps[
-                          "updateMainMenu"
-                        ];
+                        $steps["updateMainMenu"] =
+                          await $steps["updateMainMenu"];
                       }
                     }}
                   >
@@ -989,9 +983,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateMainMenu"] === "object" &&
                         typeof $steps["updateMainMenu"].then === "function"
                       ) {
-                        $steps["updateMainMenu"] = await $steps[
-                          "updateMainMenu"
-                        ];
+                        $steps["updateMainMenu"] =
+                          await $steps["updateMainMenu"];
                       }
                       $steps["updateModalInlabLoginOpen"] = true
                         ? (() => {
@@ -1025,9 +1018,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateModalInlabLoginOpen"].then ===
                           "function"
                       ) {
-                        $steps["updateModalInlabLoginOpen"] = await $steps[
-                          "updateModalInlabLoginOpen"
-                        ];
+                        $steps["updateModalInlabLoginOpen"] =
+                          await $steps["updateModalInlabLoginOpen"];
                       }
                     }}
                   >
@@ -1082,9 +1074,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateMainMenu"] === "object" &&
                         typeof $steps["updateMainMenu"].then === "function"
                       ) {
-                        $steps["updateMainMenu"] = await $steps[
-                          "updateMainMenu"
-                        ];
+                        $steps["updateMainMenu"] =
+                          await $steps["updateMainMenu"];
                       }
                       $steps["runCode"] = true
                         ? (() => {
@@ -1163,9 +1154,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateMainMenu"] === "object" &&
                         typeof $steps["updateMainMenu"].then === "function"
                       ) {
-                        $steps["updateMainMenu"] = await $steps[
-                          "updateMainMenu"
-                        ];
+                        $steps["updateMainMenu"] =
+                          await $steps["updateMainMenu"];
                       }
                       $steps["runCode"] = true
                         ? (() => {
@@ -1246,9 +1236,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateMainMenu"] === "object" &&
                         typeof $steps["updateMainMenu"].then === "function"
                       ) {
-                        $steps["updateMainMenu"] = await $steps[
-                          "updateMainMenu"
-                        ];
+                        $steps["updateMainMenu"] =
+                          await $steps["updateMainMenu"];
                       }
                       $steps["runCode"] = true
                         ? (() => {
@@ -1329,9 +1318,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateMainMenu"] === "object" &&
                         typeof $steps["updateMainMenu"].then === "function"
                       ) {
-                        $steps["updateMainMenu"] = await $steps[
-                          "updateMainMenu"
-                        ];
+                        $steps["updateMainMenu"] =
+                          await $steps["updateMainMenu"];
                       }
                       $steps[
                         "goToHttpsDocsGoogleComDocumentD1Wk4LJdBc4B1CqrEmzb4UBfoaVzaeGqbo4MgSkj8Y2SwEditTabT0"
@@ -1368,9 +1356,10 @@ function PlasmicHomepage__RenderFunc(props) {
                       ) {
                         $steps[
                           "goToHttpsDocsGoogleComDocumentD1Wk4LJdBc4B1CqrEmzb4UBfoaVzaeGqbo4MgSkj8Y2SwEditTabT0"
-                        ] = await $steps[
-                          "goToHttpsDocsGoogleComDocumentD1Wk4LJdBc4B1CqrEmzb4UBfoaVzaeGqbo4MgSkj8Y2SwEditTabT0"
-                        ];
+                        ] =
+                          await $steps[
+                            "goToHttpsDocsGoogleComDocumentD1Wk4LJdBc4B1CqrEmzb4UBfoaVzaeGqbo4MgSkj8Y2SwEditTabT0"
+                          ];
                       }
                     }}
                   >
@@ -1541,59 +1530,34 @@ function PlasmicHomepage__RenderFunc(props) {
                     </Button>
                   ) : null}
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__rijN)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__xyXap)}
+                <div className={classNames(projectcss.all, sty.freeBox__xyXap)}>
+                  <Button
+                    data-plasmic-name={
+                      "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2"
+                    }
+                    data-plasmic-override={overrides.درخواستراهاندازی2}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.درخواستراهاندازی2
+                    )}
+                    color={"blue"}
+                    link={
+                      "https://docs.google.com/forms/d/e/1FAIpQLSeu0cmLx9Vi16cV3WvJcys-8ctYElF3vQUGy1QVcbWhuaIHOA/viewform?usp=sf_link"
+                    }
+                    startIcon={
+                      <svg
+                        className={classNames(projectcss.all, sty.svg__tuNxk)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={false}
+                    target={true}
                   >
-                    <Button
-                      data-plasmic-name={
-                        "\u062f\u0631\u062e\u0648\u0627\u0633\u062a\u0631\u0627\u0647\u0627\u0646\u062f\u0627\u0632\u06cc2"
-                      }
-                      data-plasmic-override={overrides.درخواستراهاندازی2}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.درخواستراهاندازی2
-                      )}
-                      color={"blue"}
-                      link={
-                        "https://docs.google.com/forms/d/e/1FAIpQLSeu0cmLx9Vi16cV3WvJcys-8ctYElF3vQUGy1QVcbWhuaIHOA/viewform?usp=sf_link"
-                      }
-                      startIcon={
-                        <svg
-                          className={classNames(projectcss.all, sty.svg__tuNxk)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={false}
-                      target={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__hVqZe
-                        )}
-                        dir={"rtl"}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ fontWeight: 600 }}
-                          >
-                            {
-                              "\u062a\u0633\u062a \u06a9\u0646\u064a\u062f (\u0647\u0645\u064a\u0646 \u062d\u0627\u0644\u0627 \u0648 \u0631\u0627\u064a\u06af\u0627\u0646)"
-                            }
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </Button>
                     <div
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__mFfMy
+                        sty.text__hVqZe
                       )}
                       dir={"rtl"}
                     >
@@ -1605,11 +1569,30 @@ function PlasmicHomepage__RenderFunc(props) {
                           style={{ fontWeight: 600 }}
                         >
                           {
-                            "\u0647\u0645\u064a\u0646 \u062d\u0627\u0644\u0627 \u0648 \u0631\u0627\u064a\u06af\u0627\u0646"
+                            "\u062a\u0633\u062a \u06a9\u0646\u064a\u062f (\u0647\u0645\u064a\u0646 \u062d\u0627\u0644\u0627 \u0648 \u0631\u0627\u064a\u06af\u0627\u0646)"
                           }
                         </span>
                       </React.Fragment>
                     </div>
+                  </Button>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__mFfMy
+                    )}
+                    dir={"rtl"}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 600 }}
+                      >
+                        {
+                          "\u0647\u0645\u064a\u0646 \u062d\u0627\u0644\u0627 \u0648 \u0631\u0627\u064a\u06af\u0627\u0646"
+                        }
+                      </span>
+                    </React.Fragment>
                   </div>
                   <Button
                     data-plasmic-name={
@@ -5028,9 +5011,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateFaqSelectedTab"].then ===
                           "function"
                       ) {
-                        $steps["updateFaqSelectedTab"] = await $steps[
-                          "updateFaqSelectedTab"
-                        ];
+                        $steps["updateFaqSelectedTab"] =
+                          await $steps["updateFaqSelectedTab"];
                       }
                     }}
                   >
@@ -5102,9 +5084,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateFaqSelectedTab"].then ===
                           "function"
                       ) {
-                        $steps["updateFaqSelectedTab"] = await $steps[
-                          "updateFaqSelectedTab"
-                        ];
+                        $steps["updateFaqSelectedTab"] =
+                          await $steps["updateFaqSelectedTab"];
                       }
                     }}
                   >
@@ -5177,9 +5158,8 @@ function PlasmicHomepage__RenderFunc(props) {
                           typeof $steps["updateFaqSelectedTab"].then ===
                             "function"
                         ) {
-                          $steps["updateFaqSelectedTab"] = await $steps[
-                            "updateFaqSelectedTab"
-                          ];
+                          $steps["updateFaqSelectedTab"] =
+                            await $steps["updateFaqSelectedTab"];
                         }
                       }}
                     >
@@ -5254,9 +5234,8 @@ function PlasmicHomepage__RenderFunc(props) {
                           typeof $steps["updateFaqSelectedTab"].then ===
                             "function"
                         ) {
-                          $steps["updateFaqSelectedTab"] = await $steps[
-                            "updateFaqSelectedTab"
-                          ];
+                          $steps["updateFaqSelectedTab"] =
+                            await $steps["updateFaqSelectedTab"];
                         }
                       }}
                     >
@@ -5329,9 +5308,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         typeof $steps["updateFaqSelectedTab"].then ===
                           "function"
                       ) {
-                        $steps["updateFaqSelectedTab"] = await $steps[
-                          "updateFaqSelectedTab"
-                        ];
+                        $steps["updateFaqSelectedTab"] =
+                          await $steps["updateFaqSelectedTab"];
                       }
                     }}
                   >
@@ -8842,8 +8820,7 @@ function PlasmicHomepage__RenderFunc(props) {
               projectcss.root_reset,
               projectcss.plasmic_default_styles,
               projectcss.plasmic_mixins,
-              styleTokensClassNames,
-              styleTokensClassNames_antd_5_hostless
+              styleTokensClassNames
             )}
             hideFooter={true}
             maskClosable={true}
@@ -8892,9 +8869,8 @@ function PlasmicHomepage__RenderFunc(props) {
                       typeof $steps["updateModalInlabLoginOpen"].then ===
                         "function"
                     ) {
-                      $steps["updateModalInlabLoginOpen"] = await $steps[
-                        "updateModalInlabLoginOpen"
-                      ];
+                      $steps["updateModalInlabLoginOpen"] =
+                        await $steps["updateModalInlabLoginOpen"];
                     }
                   }}
                   role={"img"}

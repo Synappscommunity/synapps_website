@@ -21,7 +21,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { BaseButton } from "@plasmicpkgs/react-aria/skinny/registerButton";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
-import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicButton2.module.css"; // plasmic-import: nCt4jFntNzpF/css
@@ -135,8 +134,6 @@ function PlasmicButton2__RenderFunc(props) {
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
-  const styleTokensClassNames_antd_5_hostless =
-    useStyleTokens_antd_5_hostless();
   const [$ccVariants, setDollarCcVariants] = React.useState({
     hovered: false,
     pressed: false,
@@ -165,7 +162,6 @@ function PlasmicButton2__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        styleTokensClassNames_antd_5_hostless,
         sty.root,
         {
           [sty.rootcolor_errorDestructive]: hasVariant(
@@ -236,10 +232,10 @@ function PlasmicButton2__RenderFunc(props) {
         hasVariant($state, "type", "bordered") && $ccVariants["pressed"]
           ? true
           : hasVariant($state, "type", "bordered") && $ccVariants["hovered"]
-          ? true
-          : hasVariant($state, "type", "soft")
-          ? true
-          : false
+            ? true
+            : hasVariant($state, "type", "soft")
+              ? true
+              : false
       ) ? (
         <div
           data-plasmic-name={"softBackground"}
