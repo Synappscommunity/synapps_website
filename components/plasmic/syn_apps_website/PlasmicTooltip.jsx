@@ -83,7 +83,7 @@ function PlasmicTooltip__RenderFunc(props) {
         path: "ariaTooltip.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
       }
     ],
 
@@ -93,6 +93,7 @@ function PlasmicTooltip__RenderFunc(props) {
     $props,
     $ctx,
     $queries: {},
+    $q: {},
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();

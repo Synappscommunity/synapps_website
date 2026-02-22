@@ -65,13 +65,13 @@ function PlasmicSection__RenderFunc(props) {
         path: "background",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.background
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.background
       },
       {
         path: "size",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.size
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.size
       }
     ],
 
@@ -81,6 +81,7 @@ function PlasmicSection__RenderFunc(props) {
     $props,
     $ctx,
     $queries: {},
+    $q: {},
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();

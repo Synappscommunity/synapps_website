@@ -87,7 +87,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/plasmic_tabs/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/plasmic_tabs/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/plasmic_tabs/plasmic.jsx",
+      "dataTokensFilePath": ""
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -297,7 +298,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/react_aria/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/react_aria/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/react_aria/plasmic.jsx",
+      "dataTokensFilePath": ""
     },
     {
       "projectId": "YUiM7yqBWAqsh8KSnrdj7",
@@ -327,7 +329,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/plasmic_query/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/plasmic_query/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/plasmic_query/plasmic.jsx",
+      "dataTokensFilePath": ""
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -387,7 +390,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/plasmic_basic_components/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/plasmic_basic_components/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/plasmic_basic_components/plasmic.jsx",
+      "dataTokensFilePath": ""
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -415,7 +419,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/react_slick/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/react_slick/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/react_slick/plasmic.jsx",
+      "dataTokensFilePath": ""
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -817,7 +822,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/antd_5_hostless/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/antd_5_hostless/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/antd_5_hostless/plasmic.jsx",
+      "dataTokensFilePath": ""
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -841,7 +847,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/plasmic_nav/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/plasmic_nav/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/plasmic_nav/plasmic.jsx",
+      "dataTokensFilePath": ""
     },
     {
       "projectId": "vqCYb2b7hLWP5fdSvXKe7g",
@@ -1586,7 +1593,8 @@
       ],
       "customFunctions": [],
       "styleTokensProviderFilePath": "plasmic/syn_apps_website/PlasmicStyleTokensProvider.jsx",
-      "projectModuleFilePath": "plasmic/syn_apps_website/plasmic.jsx"
+      "projectModuleFilePath": "plasmic/syn_apps_website/plasmic.jsx",
+      "dataTokensFilePath": ""
     }
   ],
   "globalVariants": {
@@ -1604,6 +1612,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.347",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.347/dist/plasmic.schema.json"
+  "cliVersion": "0.1.359",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.359/dist/plasmic.schema.json"
 }

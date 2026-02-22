@@ -77,7 +77,7 @@ function PlasmicFooterSection__RenderFunc(props) {
         path: "textInput.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
       }
     ],
 
@@ -87,6 +87,7 @@ function PlasmicFooterSection__RenderFunc(props) {
     $props,
     $ctx,
     $queries: {},
+    $q: {},
     $refs
   });
   const styleTokensClassNames = _useStyleTokens();
@@ -521,6 +522,7 @@ function PlasmicFooterSection__RenderFunc(props) {
                   href={
                     "https://rasmio.com/company/14008652910/%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D8%B1%D9%88%D8%B4%20%D9%81%D9%86%D8%A7%D9%88%D8%B1%DB%8C%20%D8%A2%D8%AA%DB%8C%D9%87/"
                   }
+                  legacyBehavior={false}
                   platform={"nextjs"}
                   target={"_blank"}
                 >
@@ -575,6 +577,7 @@ function PlasmicFooterSection__RenderFunc(props) {
                   href={
                     "https://rasmio.com/company/14008652910/%D8%B4%D8%B1%DA%A9%D8%AA%20%D8%B3%D8%B1%D9%88%D8%B4%20%D9%81%D9%86%D8%A7%D9%88%D8%B1%DB%8C%20%D8%A2%D8%AA%DB%8C%D9%87/"
                   }
+                  legacyBehavior={false}
                   platform={"nextjs"}
                   target={"_blank"}
                 >

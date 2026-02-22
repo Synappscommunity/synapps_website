@@ -55,6 +55,46 @@ import Icons8CloseSvgIcon from "./icons/PlasmicIcon__Icons8CloseSvg"; // plasmic
 import Icons8CloseWindow50SvgIcon from "./icons/PlasmicIcon__Icons8CloseWindow50Svg"; // plasmic-import: ovHmcodcZzAz/icon
 import SearchSvg2Icon from "./icons/PlasmicIcon__SearchSvg2"; // plasmic-import: hRUfnTSeGnlb/icon
 
+const emptyProxy = new Proxy(() => "", {
+  get(_, prop) {
+    return prop === Symbol.toPrimitive ? () => "" : emptyProxy;
+  }
+});
+
+function wrapQueriesWithLoadingProxy($q) {
+  return new Proxy($q, {
+    get(target, queryName) {
+      const query = target[queryName];
+      return !query || query.isLoading || !query.data ? emptyProxy : query;
+    }
+  });
+}
+
+export function generateDynamicMetadata($q, $ctx) {
+  return {
+    title: "SynApps",
+    description:
+      "SynApps\nInlab\nسیناپس\nاینلب\nHospital\nبیمارستان\npatient\nبیمار\nLaboratory data\nنتایج آزمایشات\nپرونده الکترونیک\nپرونده بالینی\nHIS\nEHR",
+    openGraph: {
+      title: "SynApps",
+      description:
+        "SynApps\nInlab\nسیناپس\nاینلب\nHospital\nبیمارستان\npatient\nبیمار\nLaboratory data\nنتایج آزمایشات\nپرونده الکترونیک\nپرونده بالینی\nHIS\nEHR",
+      images: [
+        "https://site-assets.plasmic.app/dc36b0d8cfcba6194c4aef42e77cefd7.png"
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "SynApps",
+      description:
+        "SynApps\nInlab\nسیناپس\nاینلب\nHospital\nبیمارستان\npatient\nبیمار\nLaboratory data\nنتایج آزمایشات\nپرونده الکترونیک\nپرونده بالینی\nHIS\nEHR",
+      images: [
+        "https://site-assets.plasmic.app/dc36b0d8cfcba6194c4aef42e77cefd7.png"
+      ]
+    }
+  };
+}
+
 createPlasmicElementProxy;
 
 export const PlasmicHomepage__VariantProps = new Array();
@@ -97,13 +137,13 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "textInput.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
       },
       {
         path: "faqنصبوراهاندازي.activePanelId",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined,
         onMutate: generateOnMutateForSpec(
           "activePanelId",
           AntdAccordion_Helpers
@@ -113,7 +153,7 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "_1نصبوراهاندازي.selected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           (() => {
             try {
               return $state.faqSelectedTab === "نصب و راه اندازي";
@@ -132,7 +172,7 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "_2امنیتنرمافزار.selected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           (() => {
             try {
               return $state.faqSelectedTab === "امنیت نرم افزار";
@@ -151,7 +191,7 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "_3مجوزهاوتاييديهها.selected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           (() => {
             try {
               return $state.faqSelectedTab === "مجوزها و تاييديه‌ها";
@@ -170,7 +210,7 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "_4پشتيباني.selected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           (() => {
             try {
               return $state.faqSelectedTab === "پشتيباني";
@@ -189,33 +229,33 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "faqSelectedTab",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           "\u0646\u0635\u0628 \u0648 \u0631\u0627\u0647 \u0627\u0646\u062f\u0627\u0632\u064a"
       },
       {
         path: "mainMenu",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => false
       },
       {
         path: "modalInlabLogin.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           hasVariant(globalVariants, "screen", "mobile") ? false : false
       },
       {
         path: "searchbarWard2.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
       },
       {
         path: "faqامنیتنرمافزار.activePanelId",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined,
         onMutate: generateOnMutateForSpec(
           "activePanelId",
           AntdAccordion_Helpers
@@ -225,7 +265,7 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "_3پرداختوهزینه.selected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           (() => {
             try {
               return $state.faqSelectedTab === "پرداخت و هزینه";
@@ -244,7 +284,7 @@ function PlasmicHomepage__RenderFunc(props) {
         path: "faqپرداختوهزینه.activePanelId",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined,
         onMutate: generateOnMutateForSpec(
           "activePanelId",
           AntdAccordion_Helpers
@@ -258,54 +298,54 @@ function PlasmicHomepage__RenderFunc(props) {
     $props,
     $ctx,
     $queries: {},
+    $q: {},
     $refs
   });
+  const pageMetadata = generateDynamicMetadata(
+    wrapQueriesWithLoadingProxy({}),
+    $ctx
+  );
   const styleTokensClassNames = _useStyleTokens();
   return (
     <React.Fragment>
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
-        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
-        <meta
-          key="og:title"
-          property="og:title"
-          content={PlasmicHomepage.pageMetadata.title}
-        />
-
+        <title key="title">{pageMetadata.title}</title>
+        <meta key="og:title" property="og:title" content={pageMetadata.title} />
         <meta
           key="twitter:title"
-          name="twitter:title"
-          content={PlasmicHomepage.pageMetadata.title}
+          property="twitter:title"
+          content={pageMetadata.title}
         />
 
         <meta
           key="description"
-          name="description"
-          content={PlasmicHomepage.pageMetadata.description}
+          property="description"
+          content={pageMetadata.description}
         />
 
         <meta
           key="og:description"
           property="og:description"
-          content={PlasmicHomepage.pageMetadata.description}
+          content={pageMetadata.description}
         />
 
         <meta
           key="twitter:description"
-          name="twitter:description"
-          content={PlasmicHomepage.pageMetadata.description}
+          property="twitter:description"
+          content={pageMetadata.description}
         />
 
         <meta
           key="og:image"
           property="og:image"
-          content={PlasmicHomepage.pageMetadata.ogImageSrc}
+          content={pageMetadata.ogImageSrc}
         />
 
         <meta
           key="twitter:image"
-          name="twitter:image"
-          content={PlasmicHomepage.pageMetadata.ogImageSrc}
+          property="twitter:image"
+          content={pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -3499,7 +3539,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         sty.h3___9PDjJ
                       )}
                     >
-                      {"\u06f1\u06f0"}
+                      {"\u06f1\u06f3"}
                     </h3>
                   </div>
                   <PlasmicImg__
@@ -3795,7 +3835,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         sty.h3__uYw8O
                       )}
                     >
-                      {"\u06f1\u06f5"}
+                      {"\u06f2\u06f0"}
                     </h3>
                   </div>
                   <PlasmicImg__
@@ -4660,7 +4700,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         sty.h3__wbdXa
                       )}
                     >
-                      {"\u06f2\u06f0"}
+                      {"\u06f2\u06f6"}
                     </h3>
                   </div>
                   <PlasmicImg__
@@ -5795,6 +5835,7 @@ function PlasmicHomepage__RenderFunc(props) {
                           AntdAccordion_Helpers
                         ).apply(null, eventArgs);
                       },
+                      rotationAngle: 90,
                       size: "large"
                     };
                     initializeCodeComponentStates(
@@ -6098,6 +6139,7 @@ function PlasmicHomepage__RenderFunc(props) {
                           AntdAccordion_Helpers
                         ).apply(null, eventArgs);
                       },
+                      rotationAngle: 90,
                       size: "large"
                     };
                     initializeCodeComponentStates(
@@ -6342,6 +6384,7 @@ function PlasmicHomepage__RenderFunc(props) {
                           AntdAccordion_Helpers
                         ).apply(null, eventArgs);
                       },
+                      rotationAngle: 90,
                       size: "large"
                     };
                     initializeCodeComponentStates(
@@ -10123,15 +10166,11 @@ export const PlasmicHomepage = Object.assign(
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,
-    // Page metadata
-    pageMetadata: {
-      title: "SynApps",
-      description:
-        "SynApps\nInlab\nسیناپس\nاینلب\nHospital\nبیمارستان\npatient\nبیمار\nLaboratory data\nنتایج آزمایشات\nپرونده الکترونیک\nپرونده بالینی\nHIS\nEHR",
-      ogImageSrc:
-        "https://site-assets.plasmic.app/dc36b0d8cfcba6194c4aef42e77cefd7.png",
-      canonical: ""
-    }
+    pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
+      pagePath: "/",
+      searchParams: {},
+      params: {}
+    })
   }
 );
 

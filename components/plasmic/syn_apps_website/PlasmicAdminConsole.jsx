@@ -44,6 +44,34 @@ import Icons8CloseWindow50SvgIcon from "./icons/PlasmicIcon__Icons8CloseWindow50
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: jjQ9fZu8jJX0/icon
 import LockPasswordSvgrepoComSvgIcon from "./icons/PlasmicIcon__LockPasswordSvgrepoComSvg"; // plasmic-import: 3799jChm8Q-m/icon
 
+const emptyProxy = new Proxy(() => "", {
+  get(_, prop) {
+    return prop === Symbol.toPrimitive ? () => "" : emptyProxy;
+  }
+});
+
+function wrapQueriesWithLoadingProxy($q) {
+  return new Proxy($q, {
+    get(target, queryName) {
+      const query = target[queryName];
+      return !query || query.isLoading || !query.data ? emptyProxy : query;
+    }
+  });
+}
+
+export function generateDynamicMetadata($q, $ctx) {
+  return {
+    title: "admin console",
+    openGraph: {
+      title: "admin console"
+    },
+    twitter: {
+      card: "summary",
+      title: "admin console"
+    }
+  };
+}
+
 createPlasmicElementProxy;
 
 export const PlasmicAdminConsole__VariantProps = new Array();
@@ -86,19 +114,19 @@ function PlasmicAdminConsole__RenderFunc(props) {
         path: "phoneNumber.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
       },
       {
         path: "password.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ``
       },
       {
         path: "loginGetSubscriptionDetail",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => false
       }
     ],
 
@@ -108,24 +136,24 @@ function PlasmicAdminConsole__RenderFunc(props) {
     $props,
     $ctx,
     $queries: {},
+    $q: {},
     $refs
   });
+  const pageMetadata = generateDynamicMetadata(
+    wrapQueriesWithLoadingProxy({}),
+    $ctx
+  );
   const styleTokensClassNames = _useStyleTokens();
   return (
     <React.Fragment>
       <Head>
         <meta name="twitter:card" content="summary" />
-        <title key="title">{PlasmicAdminConsole.pageMetadata.title}</title>
-        <meta
-          key="og:title"
-          property="og:title"
-          content={PlasmicAdminConsole.pageMetadata.title}
-        />
-
+        <title key="title">{pageMetadata.title}</title>
+        <meta key="og:title" property="og:title" content={pageMetadata.title} />
         <meta
           key="twitter:title"
-          name="twitter:title"
-          content={PlasmicAdminConsole.pageMetadata.title}
+          property="twitter:title"
+          content={pageMetadata.title}
         />
       </Head>
 
@@ -1807,13 +1835,11 @@ export const PlasmicAdminConsole = Object.assign(
     // Metadata about props expected for PlasmicAdminConsole
     internalVariantProps: PlasmicAdminConsole__VariantProps,
     internalArgProps: PlasmicAdminConsole__ArgProps,
-    // Page metadata
-    pageMetadata: {
-      title: "admin console",
-      description: "",
-      ogImageSrc: "",
-      canonical: ""
-    }
+    pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
+      pagePath: "/admin-console",
+      searchParams: {},
+      params: {}
+    })
   }
 );
 

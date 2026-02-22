@@ -9126,7 +9126,7 @@
 @media (max-width: 760px) {
   .svg__mdQbs {
     height: 20px;
-    transform: translateX(5px) translateY(0px) translateZ(0px);
+    transform: translate3d(5px, 0px, 0px);
   }
 }
 .svg___12185 {
