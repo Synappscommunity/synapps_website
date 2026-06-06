@@ -24,7 +24,6 @@ import { BaseTooltip } from "@plasmicpkgs/react-aria/skinny/registerTooltip";
 import OverlayArrow from "../../OverlayArrow"; // plasmic-import: TmWqxKMkHHIo/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicTooltip.module.css"; // plasmic-import: U44kK7A0RrhO/css
 
 createPlasmicElementProxy;
@@ -83,7 +82,7 @@ function PlasmicTooltip__RenderFunc(props) {
         path: "ariaTooltip.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => false
       }
     ],
 
@@ -105,13 +104,14 @@ function PlasmicTooltip__RenderFunc(props) {
       data-plasmic-for-node={forNode}
       className={classNames(
         "__wab_instance",
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.ariaTooltip
       )}
       closeDelay={args.closeDelay}
+      defaultOpen={false}
       delay={args.delay}
       isDisabled={args.isDisabled}
       isOpen={generateStateValueProp($state, ["ariaTooltip", "isOpen"])}
@@ -124,9 +124,9 @@ function PlasmicTooltip__RenderFunc(props) {
       }}
       placement={args.placement}
       resetClassName={classNames(
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames
       )}
       tooltipContent={
@@ -141,26 +141,18 @@ function PlasmicTooltip__RenderFunc(props) {
           <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
+            className={classNames("all", sty.freeBox)}
           >
             {renderPlasmicSlot({
               defaultContents: (
                 <React.Fragment>
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__aZVy3
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__aZVy3)}
                   >
                     {"Hello from Tooltip! "}
                   </div>
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__fr9MS
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__fr9MS)}
                   >
                     {"Lorem ipsum dolor sit amet"}
                   </div>
@@ -176,13 +168,7 @@ function PlasmicTooltip__RenderFunc(props) {
     >
       {renderPlasmicSlot({
         defaultContents: (
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__awZqJ
-            )}
-          >
+          <div className={classNames("all", "__wab_text", sty.text__awZqJ)}>
             {"Hover me!"}
           </div>
         ),

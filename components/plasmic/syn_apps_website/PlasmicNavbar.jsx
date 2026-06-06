@@ -22,7 +22,6 @@ import Button from "../../Button"; // plasmic-import: qDkIQgIGzzHX/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicNavbar.module.css"; // plasmic-import: JlZE_UpCnEsq/css
 
 createPlasmicElementProxy;
@@ -69,15 +68,15 @@ function PlasmicNavbar__RenderFunc(props) {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__cUmmR)}>
+      <div className={classNames("all", sty.freeBox__cUmmR)}>
         <Logo
           data-plasmic-name={"logo"}
           data-plasmic-override={overrides.logo}
@@ -87,32 +86,28 @@ function PlasmicNavbar__RenderFunc(props) {
           }
         />
 
-        <div className={classNames(projectcss.all, sty.freeBox__lyfoh)}>
+        <div className={classNames("all", sty.freeBox__lyfoh)}>
           {false ? (
             <Button
               className={classNames("__wab_instance", sty.button___9W8Ui)}
               color={"navLink"}
               endIcon={
                 <svg
-                  className={classNames(projectcss.all, sty.svg__y88J2)}
+                  className={classNames("all", sty.svg__y88J2)}
                   role={"img"}
                 />
               }
               link={"#"}
               startIcon={
                 <svg
-                  className={classNames(projectcss.all, sty.svg__l2PCu)}
+                  className={classNames("all", sty.svg__l2PCu)}
                   role={"img"}
                 />
               }
               submitsForm={true}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___95Lhb
-                )}
+                className={classNames("all", "__wab_text", sty.text___95Lhb)}
               >
                 {"FAQs"}
               </div>
@@ -124,26 +119,20 @@ function PlasmicNavbar__RenderFunc(props) {
               color={"navLink"}
               endIcon={
                 <svg
-                  className={classNames(projectcss.all, sty.svg___0C2Nw)}
+                  className={classNames("all", sty.svg___0C2Nw)}
                   role={"img"}
                 />
               }
               link={"#"}
               startIcon={
                 <svg
-                  className={classNames(projectcss.all, sty.svg__jv4Ca)}
+                  className={classNames("all", sty.svg__jv4Ca)}
                   role={"img"}
                 />
               }
               submitsForm={true}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__u9Tf1
-                )}
-              >
+              <div className={classNames("all", "__wab_text", sty.text__u9Tf1)}>
                 {"How it Work"}
               </div>
             </Button>
@@ -160,7 +149,7 @@ function PlasmicNavbar__RenderFunc(props) {
               }
               endIcon={
                 <svg
-                  className={classNames(projectcss.all, sty.svg__bvT7W)}
+                  className={classNames("all", sty.svg__bvT7W)}
                   role={"img"}
                 />
               }
@@ -174,23 +163,19 @@ function PlasmicNavbar__RenderFunc(props) {
               }
               startIcon={
                 <svg
-                  className={classNames(projectcss.all, sty.svg__jpF0Z)}
+                  className={classNames("all", sty.svg__jpF0Z)}
                   role={"img"}
                 />
               }
               submitsForm={true}
               target={true}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__yIz3Q
-                )}
-              >
+              <div className={classNames("all", "__wab_text", sty.text__yIz3Q)}>
                 <React.Fragment>
                   <span
-                    className={"plasmic_default__all plasmic_default__span"}
+                    className={
+                      "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
+                    }
                     style={{ fontWeight: 600 }}
                   >
                     {"InLabData"}
@@ -200,13 +185,13 @@ function PlasmicNavbar__RenderFunc(props) {
             </Button>
           ) : null}
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox__aWzS)}>
+        <div className={classNames("all", sty.freeBox__aWzS)}>
           <Button
             className={classNames("__wab_instance", sty.button__s92YV)}
             color={"navLink"}
             endIcon={
               <svg
-                className={classNames(projectcss.all, sty.svg___510Tu)}
+                className={classNames("all", sty.svg___510Tu)}
                 role={"img"}
               />
             }
@@ -215,24 +200,17 @@ function PlasmicNavbar__RenderFunc(props) {
             }
             outline={true}
             startIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__hmx6V)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__hmx6V)} role={"img"} />
             }
             submitsForm={true}
             target={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__rksXc
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__rksXc)}>
               <React.Fragment>
                 <span
-                  className={"plasmic_default__all plasmic_default__span"}
+                  className={
+                    "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
+                  }
                   style={{ fontWeight: 600 }}
                 >
                   {"\u062a\u0633\u062a \u06a9\u0646\u06cc\u062f"}
@@ -244,10 +222,7 @@ function PlasmicNavbar__RenderFunc(props) {
             className={classNames("__wab_instance", sty.button__mb8Fs)}
             color={"navLinkBlue"}
             endIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__mBU2)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__mBU2)} role={"img"} />
             }
             link={
               "https://docs.google.com/forms/d/e/1FAIpQLScLcMumZPoiqRjH4NgAfzjx0gkoHd46j2x6_VjBMQSMDKJOpQ/viewform?usp=sf_link"
@@ -256,21 +231,12 @@ function PlasmicNavbar__RenderFunc(props) {
               const $steps = {};
             }}
             startIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__zlGd)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__zlGd)} role={"img"} />
             }
             submitsForm={false}
             target={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__j2CxW
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__j2CxW)}>
               {
                 "\u0631\u0627\u0647 \u0627\u0646\u062f\u0627\u0632\u064a \u062f\u0631 \u0628\u064a\u0645\u0627\u0631\u0633\u062a\u0627\u0646 \u062c\u062f\u064a\u062f"
               }

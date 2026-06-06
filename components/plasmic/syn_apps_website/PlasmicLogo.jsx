@@ -23,7 +23,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicLogo.module.css"; // plasmic-import: sRn2-bHz6HgN/css
 
 createPlasmicElementProxy;
@@ -94,11 +93,12 @@ function PlasmicLogo__RenderFunc(props) {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.a,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "a",
+        "a__vqCYb",
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root,
         { [sty.root_50Opaque]: hasVariant($state, "_50Opaque", "_50Opaque") }

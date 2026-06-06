@@ -22,7 +22,6 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { BaseButton } from "@plasmicpkgs/react-aria/skinny/registerButton";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicButton2.module.css"; // plasmic-import: nCt4jFntNzpF/css
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: bV5FzCtGiJvd/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: 0UbWV48NIvy6/icon
@@ -159,9 +158,9 @@ function PlasmicButton2__RenderFunc(props) {
       aria-label={args.ariaLabel}
       className={classNames(
         "__wab_instance",
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root,
         {
@@ -241,7 +240,7 @@ function PlasmicButton2__RenderFunc(props) {
         <div
           data-plasmic-name={"softBackground"}
           data-plasmic-override={overrides.softBackground}
-          className={classNames(projectcss.all, sty.softBackground, {
+          className={classNames("all", sty.softBackground, {
             [sty.softBackgroundcolor_errorDestructive]: hasVariant(
               $state,
               "color",
@@ -286,7 +285,7 @@ function PlasmicButton2__RenderFunc(props) {
         <div
           data-plasmic-name={"border"}
           data-plasmic-override={overrides.border}
-          className={classNames(projectcss.all, sty.border, {
+          className={classNames("all", sty.border, {
             [sty.bordercolor_errorDestructive]: hasVariant(
               $state,
               "color",
@@ -321,7 +320,7 @@ function PlasmicButton2__RenderFunc(props) {
       <div
         data-plasmic-name={"interactionEffect"}
         data-plasmic-override={overrides.interactionEffect}
-        className={classNames(projectcss.all, sty.interactionEffect, {
+        className={classNames("all", sty.interactionEffect, {
           [sty.interactionEffectcolor_errorDestructive]: hasVariant(
             $state,
             "color",
@@ -380,7 +379,7 @@ function PlasmicButton2__RenderFunc(props) {
       />
 
       <div
-        className={classNames(projectcss.all, sty.freeBox___0Glbk, {
+        className={classNames("all", sty.freeBox___0Glbk, {
           [sty.freeBoxcolor_neutral___0Glbkhk8Ym]: hasVariant(
             $state,
             "color",
@@ -422,7 +421,7 @@ function PlasmicButton2__RenderFunc(props) {
         })}
       >
         <div
-          className={classNames(projectcss.all, sty.freeBox__jocC, {
+          className={classNames("all", sty.freeBox__jocC, {
             [sty.freeBoxcolor_neutral__jocChk8Ym]: hasVariant(
               $state,
               "color",
@@ -461,7 +460,7 @@ function PlasmicButton2__RenderFunc(props) {
           {renderPlasmicSlot({
             defaultContents: (
               <CircleIcon
-                className={classNames(projectcss.all, sty.svg__hC9Us)}
+                className={classNames("all", sty.svg__hC9Us)}
                 role={"img"}
               />
             ),
@@ -559,13 +558,7 @@ function PlasmicButton2__RenderFunc(props) {
         </div>
         {renderPlasmicSlot({
           defaultContents: (
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__jljol
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__jljol)}>
               {"Text"}
             </div>
           ),
@@ -666,7 +659,7 @@ function PlasmicButton2__RenderFunc(props) {
           })
         })}
         <div
-          className={classNames(projectcss.all, sty.freeBox___5CUas, {
+          className={classNames("all", sty.freeBox___5CUas, {
             [sty.freeBoxiconEnd___5CUas09R2S]: hasVariant(
               $state,
               "iconEnd",
@@ -692,7 +685,7 @@ function PlasmicButton2__RenderFunc(props) {
           {renderPlasmicSlot({
             defaultContents: (
               <ChevronDownIcon
-                className={classNames(projectcss.all, sty.svg__tAaHb)}
+                className={classNames("all", sty.svg__tAaHb)}
                 role={"img"}
               />
             ),

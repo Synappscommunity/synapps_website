@@ -28,7 +28,6 @@ import TextInput from "../../TextInput"; // plasmic-import: H5mAYWyWYBfw/compone
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicFooterSection.module.css"; // plasmic-import: 9AUvb_VWiKJR/css
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: jjQ9fZu8jJX0/icon
 import TelegramSvgrepoComSvgIcon from "./icons/PlasmicIcon__TelegramSvgrepoComSvg"; // plasmic-import: fMuaxndELgXl/icon
@@ -70,7 +69,6 @@ function PlasmicFooterSection__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const globalVariants = _useGlobalVariants();
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -83,6 +81,7 @@ function PlasmicFooterSection__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
+  const globalVariants = _useGlobalVariants();
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -98,10 +97,10 @@ function PlasmicFooterSection__RenderFunc(props) {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root
       )}
@@ -109,12 +108,12 @@ function PlasmicFooterSection__RenderFunc(props) {
       <div
         data-plasmic-name={"section1"}
         data-plasmic-override={overrides.section1}
-        className={classNames(projectcss.all, sty.section1)}
+        className={classNames("all", sty.section1)}
       >
         <div
           data-plasmic-name={"footerLogoSocialPhone"}
           data-plasmic-override={overrides.footerLogoSocialPhone}
-          className={classNames(projectcss.all, sty.footerLogoSocialPhone)}
+          className={classNames("all", sty.footerLogoSocialPhone)}
         >
           <PlasmicImg__
             data-plasmic-name={"logo"}
@@ -138,13 +137,7 @@ function PlasmicFooterSection__RenderFunc(props) {
             }}
           />
 
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__bLnXn
-            )}
-          >
+          <div className={classNames("all", "__wab_text", sty.text__bLnXn)}>
             {
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
             }
@@ -152,23 +145,19 @@ function PlasmicFooterSection__RenderFunc(props) {
           <div
             data-plasmic-name={"phone"}
             data-plasmic-override={overrides.phone}
-            className={classNames(projectcss.all, sty.phone)}
+            className={classNames("all", sty.phone)}
           >
             <IconIcon
-              className={classNames(projectcss.all, sty.svg__zeRz3)}
+              className={classNames("all", sty.svg__zeRz3)}
               role={"img"}
             />
 
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__b13Wt
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__b13Wt)}>
               <React.Fragment>
                 <span
-                  className={"plasmic_default__all plasmic_default__span"}
+                  className={
+                    "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
+                  }
                   style={{
                     color: "var(--token-Jf9kqXAINH8P)",
                     fontWeight: 700
@@ -182,12 +171,12 @@ function PlasmicFooterSection__RenderFunc(props) {
           <div
             data-plasmic-name={"socialMedia"}
             data-plasmic-override={overrides.socialMedia}
-            className={classNames(projectcss.all, sty.socialMedia)}
+            className={classNames("all", sty.socialMedia)}
           >
             <TelegramSvgrepoComSvgIcon
               data-plasmic-name={"telegram"}
               data-plasmic-override={overrides.telegram}
-              className={classNames(projectcss.all, sty.telegram)}
+              className={classNames("all", sty.telegram)}
               onClick={async event => {
                 const $steps = {};
                 $steps["goToTelegram"] = true
@@ -221,12 +210,12 @@ function PlasmicFooterSection__RenderFunc(props) {
             />
 
             <InstagramSvgIcon
-              className={classNames(projectcss.all, sty.svg__mnxa)}
+              className={classNames("all", sty.svg__mnxa)}
               role={"img"}
             />
 
             <LinkedinSvgIcon
-              className={classNames(projectcss.all, sty.svg__rHwgD)}
+              className={classNames("all", sty.svg__rHwgD)}
               onClick={async event => {
                 const $steps = {};
                 $steps["goToLinkedin"] = true
@@ -261,12 +250,13 @@ function PlasmicFooterSection__RenderFunc(props) {
             />
           </div>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox__wJ3Pu)}>
+        <div className={classNames("all", sty.freeBox__wJ3Pu)}>
           <h4
             className={classNames(
-              projectcss.all,
-              projectcss.h4,
-              projectcss.__wab_text,
+              "all",
+              "h4",
+              "h4__vqCYb",
+              "__wab_text",
               sty.h4__liKxd
             )}
           >
@@ -276,27 +266,15 @@ function PlasmicFooterSection__RenderFunc(props) {
             className={classNames("__wab_instance", sty.button___55I1H)}
             color={"footerButton"}
             endIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__nkwm)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__nkwm)} role={"img"} />
             }
             link={"#"}
             startIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__fzCug)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__fzCug)} role={"img"} />
             }
             submitsForm={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__sdRDg
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__sdRDg)}>
               {"How it work"}
             </div>
           </Button>
@@ -304,27 +282,15 @@ function PlasmicFooterSection__RenderFunc(props) {
             className={classNames("__wab_instance", sty.button___867S)}
             color={"footerButton"}
             endIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__eLpXp)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__eLpXp)} role={"img"} />
             }
             link={"#"}
             startIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__afPmA)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__afPmA)} role={"img"} />
             }
             submitsForm={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__zJcf5
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__zJcf5)}>
               {"Pricing"}
             </div>
           </Button>
@@ -332,37 +298,29 @@ function PlasmicFooterSection__RenderFunc(props) {
             className={classNames("__wab_instance", sty.button___5IoBh)}
             color={"footerButton"}
             endIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__yNeje)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__yNeje)} role={"img"} />
             }
             link={"#"}
             startIcon={
               <svg
-                className={classNames(projectcss.all, sty.svg___8OgXh)}
+                className={classNames("all", sty.svg___8OgXh)}
                 role={"img"}
               />
             }
             submitsForm={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__w6U85
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__w6U85)}>
               {"FAQs"}
             </div>
           </Button>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox__xgvaA)}>
+        <div className={classNames("all", sty.freeBox__xgvaA)}>
           <h4
             className={classNames(
-              projectcss.all,
-              projectcss.h4,
-              projectcss.__wab_text,
+              "all",
+              "h4",
+              "h4__vqCYb",
+              "__wab_text",
               sty.h4__ndLIg
             )}
           >
@@ -373,26 +331,17 @@ function PlasmicFooterSection__RenderFunc(props) {
             color={"footerButton"}
             endIcon={
               <svg
-                className={classNames(projectcss.all, sty.svg___6Wyko)}
+                className={classNames("all", sty.svg___6Wyko)}
                 role={"img"}
               />
             }
             link={"#"}
             startIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__hsWoO)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__hsWoO)} role={"img"} />
             }
             submitsForm={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__jMYbj
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__jMYbj)}>
               {"Privacy and Policy"}
             </div>
           </Button>
@@ -400,49 +349,32 @@ function PlasmicFooterSection__RenderFunc(props) {
             className={classNames("__wab_instance", sty.button___7Kgey)}
             color={"footerButton"}
             endIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__oNGul)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__oNGul)} role={"img"} />
             }
             link={"#"}
             startIcon={
-              <svg
-                className={classNames(projectcss.all, sty.svg__pwGxf)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__pwGxf)} role={"img"} />
             }
             submitsForm={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__droMw
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__droMw)}>
               {"Terms of Use"}
             </div>
           </Button>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox___8PM5S)}>
+        <div className={classNames("all", sty.freeBox___8PM5S)}>
           <h4
             className={classNames(
-              projectcss.all,
-              projectcss.h4,
-              projectcss.__wab_text,
+              "all",
+              "h4",
+              "h4__vqCYb",
+              "__wab_text",
               sty.h4__tDzUz
             )}
           >
             {"Company"}
           </h4>
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__vvOjx
-            )}
-          >
+          <div className={classNames("all", "__wab_text", sty.text__vvOjx)}>
             {"Lorem ipsum dolor sit amet, consectetur."}
           </div>
           <TextInput
@@ -474,13 +406,7 @@ function PlasmicFooterSection__RenderFunc(props) {
             }
             submitsForm={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__jixt7
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__jixt7)}>
               {hasVariant(globalVariants, "screen", "mobile")
                 ? "Subscribe"
                 : "Subscribe"}
@@ -491,15 +417,9 @@ function PlasmicFooterSection__RenderFunc(props) {
       <div
         data-plasmic-name={"section2"}
         data-plasmic-override={overrides.section2}
-        className={classNames(projectcss.all, sty.section2)}
+        className={classNames("all", sty.section2)}
       >
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__jtrjs
-          )}
-        >
+        <div className={classNames("all", "__wab_text", sty.text__jtrjs)}>
           {hasVariant(globalVariants, "screen", "mobile") ? (
             <React.Fragment>
               <React.Fragment>
@@ -512,10 +432,11 @@ function PlasmicFooterSection__RenderFunc(props) {
                   data-plasmic-name={"link"}
                   data-plasmic-override={overrides.link}
                   className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    projectcss.plasmic_default__inline,
+                    "all",
+                    "a",
+                    "a__vqCYb",
+                    "__wab_text",
+                    "plasmic_default__inline",
                     sty.link
                   )}
                   component={Link}
@@ -529,7 +450,9 @@ function PlasmicFooterSection__RenderFunc(props) {
                   {hasVariant(globalVariants, "screen", "mobile") ? (
                     <React.Fragment>
                       <span
-                        className={"plasmic_default__all plasmic_default__span"}
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
+                        }
                         style={{ textDecorationLine: "underline" }}
                       >
                         {
@@ -540,7 +463,9 @@ function PlasmicFooterSection__RenderFunc(props) {
                   ) : (
                     <React.Fragment>
                       <span
-                        className={"plasmic_default__all plasmic_default__span"}
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
+                        }
                         style={{ textDecorationLine: "underline" }}
                       >
                         {
@@ -567,10 +492,11 @@ function PlasmicFooterSection__RenderFunc(props) {
                   data-plasmic-name={"link"}
                   data-plasmic-override={overrides.link}
                   className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    projectcss.plasmic_default__inline,
+                    "all",
+                    "a",
+                    "a__vqCYb",
+                    "__wab_text",
+                    "plasmic_default__inline",
                     sty.link
                   )}
                   component={Link}
@@ -584,7 +510,9 @@ function PlasmicFooterSection__RenderFunc(props) {
                   {hasVariant(globalVariants, "screen", "mobile") ? (
                     <React.Fragment>
                       <span
-                        className={"plasmic_default__all plasmic_default__span"}
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
+                        }
                         style={{ textDecorationLine: "underline" }}
                       >
                         {
@@ -595,7 +523,9 @@ function PlasmicFooterSection__RenderFunc(props) {
                   ) : (
                     <React.Fragment>
                       <span
-                        className={"plasmic_default__all plasmic_default__span"}
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
+                        }
                         style={{ textDecorationLine: "underline" }}
                       >
                         {

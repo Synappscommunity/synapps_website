@@ -24,7 +24,6 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import * as pp from "@plasmicapp/react-web";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicButton.module.css"; // plasmic-import: qDkIQgIGzzHX/css
 import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: 8AneqvOP5tZq/icon
 
@@ -179,11 +178,12 @@ function PlasmicButton__RenderFunc(props) {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.button,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "button",
+        "button__vqCYb",
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root,
         {
@@ -252,10 +252,7 @@ function PlasmicButton__RenderFunc(props) {
       )
         ? renderPlasmicSlot({
             defaultContents: (
-              <svg
-                className={classNames(projectcss.all, sty.svg__zauyw)}
-                role={"img"}
-              />
+              <svg className={classNames("all", sty.svg__zauyw)} role={"img"} />
             ),
 
             value: args.startIcon,
@@ -459,7 +456,7 @@ function PlasmicButton__RenderFunc(props) {
         ? renderPlasmicSlot({
             defaultContents: (
               <ChevronRightIcon
-                className={classNames(projectcss.all, sty.svg___4DvKh)}
+                className={classNames("all", sty.svg___4DvKh)}
                 role={"img"}
               />
             ),

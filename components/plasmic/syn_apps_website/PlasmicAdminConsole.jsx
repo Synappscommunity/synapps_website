@@ -34,7 +34,6 @@ import { DataFetcher } from "@plasmicpkgs/plasmic-query";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicAdminConsole.module.css"; // plasmic-import: ZllxQYrS4va2/css
 import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: WNXItNZeyPBz/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: X6yfQQfulV5Q/icon
@@ -107,7 +106,6 @@ function PlasmicAdminConsole__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const globalVariants = _useGlobalVariants();
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -132,6 +130,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
+  const globalVariants = _useGlobalVariants();
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -163,17 +162,17 @@ function PlasmicAdminConsole__RenderFunc(props) {
         }
       `}</style>
 
-      <div className={projectcss.plasmic_page_wrapper}>
+      <div className={"plasmic_page_wrapper"}>
         <div
           data-plasmic-name={"root"}
           data-plasmic-override={overrides.root}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
-            projectcss.all,
-            projectcss.root_reset,
-            projectcss.plasmic_default_styles,
-            projectcss.plasmic_mixins,
+            "all",
+            "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+            "plasmic_default_styles",
+            "plasmic_mixins",
             styleTokensClassNames,
             sty.root
           )}
@@ -181,9 +180,9 @@ function PlasmicAdminConsole__RenderFunc(props) {
           <div
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
-            className={classNames(projectcss.all, sty.header)}
+            className={classNames("all", sty.header)}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__yorP)}>
+            <div className={classNames("all", sty.freeBox__yorP)}>
               <PlasmicImg__
                 data-plasmic-name={"img"}
                 data-plasmic-override={overrides.img}
@@ -234,17 +233,16 @@ function PlasmicAdminConsole__RenderFunc(props) {
               {(
                 hasVariant(globalVariants, "screen", "mobile") ? false : true
               ) ? (
-                <div
-                  className={classNames(projectcss.all, sty.freeBox__as19T)}
-                />
+                <div className={classNames("all", sty.freeBox__as19T)} />
               ) : null}
               {false ? (
-                <div className={classNames(projectcss.all, sty.freeBox__gs65Y)}>
+                <div className={classNames("all", sty.freeBox__gs65Y)}>
                   <button
                     className={classNames(
-                      projectcss.all,
-                      projectcss.button,
-                      projectcss.__wab_text,
+                      "all",
+                      "button",
+                      "button__vqCYb",
+                      "__wab_text",
                       sty.button__nShN
                     )}
                   >
@@ -255,13 +253,13 @@ function PlasmicAdminConsole__RenderFunc(props) {
                     color={undefined}
                     endIcon={
                       <Icon38Icon
-                        className={classNames(projectcss.all, sty.svg__ldPx)}
+                        className={classNames("all", sty.svg__ldPx)}
                         role={"img"}
                       />
                     }
                     startIcon={
                       <CheckSvgIcon
-                        className={classNames(projectcss.all, sty.svg__sWupo)}
+                        className={classNames("all", sty.svg__sWupo)}
                         role={"img"}
                       />
                     }
@@ -269,8 +267,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   >
                     <div
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
+                        "all",
+                        "__wab_text",
                         sty.text__wQ0Va
                       )}
                     >
@@ -282,19 +280,15 @@ function PlasmicAdminConsole__RenderFunc(props) {
               <div
                 data-plasmic-name={"menuTitle"}
                 data-plasmic-override={overrides.menuTitle}
-                className={classNames(projectcss.all, sty.menuTitle)}
+                className={classNames("all", sty.menuTitle)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__rmWwF
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__rmWwF)}
                 >
                   {"\u0645\u0646\u0648"}
                 </div>
                 <HamburgerIcon
-                  className={classNames(projectcss.all, sty.svg__iEm9)}
+                  className={classNames("all", sty.svg__iEm9)}
                   role={"img"}
                 />
               </div>
@@ -302,10 +296,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
             <div
               data-plasmic-name={"mobileMenu"}
               data-plasmic-override={overrides.mobileMenu}
-              className={classNames(projectcss.all, sty.mobileMenu)}
+              className={classNames("all", sty.mobileMenu)}
             >
               <Icons8CloseSvgIcon
-                className={classNames(projectcss.all, sty.svg__qG38)}
+                className={classNames("all", sty.svg__qG38)}
                 role={"img"}
               />
 
@@ -315,7 +309,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                 className={classNames("__wab_instance", sty.menu)}
                 expandIcon={
                   <Icons8CloseWindow50SvgIcon
-                    className={classNames(projectcss.all, sty.svg__mMqC1)}
+                    className={classNames("all", sty.svg__mMqC1)}
                     role={"img"}
                   />
                 }
@@ -341,7 +335,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                     }
                     startIcon={
                       <svg
-                        className={classNames(projectcss.all, sty.svg__nKqVg)}
+                        className={classNames("all", sty.svg__nKqVg)}
                         role={"img"}
                       />
                     }
@@ -350,8 +344,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   >
                     <div
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
+                        "all",
+                        "__wab_text",
                         sty.text___8KO9D
                       )}
                       dir={"rtl"}
@@ -359,7 +353,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       <React.Fragment>
                         <span
                           className={
-                            "plasmic_default__all plasmic_default__span"
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__vqCYb"
                           }
                           style={{ fontWeight: 600 }}
                         >
@@ -378,11 +372,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   key={"menuItemKey1"}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__nMOfc
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__nMOfc)}
                   >
                     {
                       "\u0648\u0631\u0648\u062f \u0628\u0647 \u0627\u064a\u0646\u0644\u0628"
@@ -398,11 +388,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   key={"menuItemKey1"}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__iE4L
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__iE4L)}
                   >
                     {"\u062f\u064a\u0648\u0627\u0631 \u0639\u0634\u0642"}
                   </div>
@@ -416,11 +402,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   key={"menuItemKey1"}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__vOvJe
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__vOvJe)}
                   >
                     {"\u0642\u064a\u0645\u062a \u06af\u0630\u0627\u0631\u064a"}
                   </div>
@@ -434,11 +416,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   key={"menuItemKey1"}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__qw19P
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__qw19P)}
                   >
                     {
                       "\u0633\u0648\u0627\u0644\u0627\u062a \u0634\u0627\u064a\u0639"
@@ -454,11 +432,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                   key={"menuItemKey1"}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__zGkG1
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__zGkG1)}
                   >
                     {
                       "\u062f\u0631\u0628\u0627\u0631\u0647 \u0633\u06cc\u0646\u0627\u067e\u0633"
@@ -471,14 +445,10 @@ function PlasmicAdminConsole__RenderFunc(props) {
           <div
             data-plasmic-name={"inputStack"}
             data-plasmic-override={overrides.inputStack}
-            className={classNames(projectcss.all, sty.inputStack)}
+            className={classNames("all", sty.inputStack)}
           >
             <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__mayps
-              )}
+              className={classNames("all", "__wab_text", sty.text__mayps)}
               dir={"rtl"}
             >
               {
@@ -491,7 +461,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
               className={classNames("__wab_instance", sty.phoneNumber)}
               endIcon={
                 <Icons8CloseSvgIcon
-                  className={classNames(projectcss.all, sty.svg__iJeu)}
+                  className={classNames("all", sty.svg__iJeu)}
                   role={"img"}
                 />
               }
@@ -517,7 +487,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
               showStartIcon={true}
               startIcon={
                 <IconIcon
-                  className={classNames(projectcss.all, sty.svg___4T8Ij)}
+                  className={classNames("all", sty.svg___4T8Ij)}
                   role={"img"}
                 />
               }
@@ -534,7 +504,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
               className={classNames("__wab_instance", sty.password)}
               endIcon={
                 <Icons8CloseSvgIcon
-                  className={classNames(projectcss.all, sty.svg__xtMCd)}
+                  className={classNames("all", sty.svg__xtMCd)}
                   role={"img"}
                 />
               }
@@ -557,7 +527,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
               showStartIcon={true}
               startIcon={
                 <LockPasswordSvgrepoComSvgIcon
-                  className={classNames(projectcss.all, sty.svg__kz6B1)}
+                  className={classNames("all", sty.svg__kz6B1)}
                   role={"img"}
                 />
               }
@@ -612,13 +582,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
               }}
               submitsForm={false}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__uSiV8
-                )}
-              >
+              <div className={classNames("all", "__wab_text", sty.text__uSiV8)}>
                 {"\u0648\u0631\u0648\u062f"}
               </div>
             </Button>
@@ -671,22 +635,18 @@ function PlasmicAdminConsole__RenderFunc(props) {
                     }
                   })() ? (
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__myxnz)}
+                      className={classNames("all", sty.freeBox__myxnz)}
                       dir={"rtl"}
                     >
                       <div
                         data-plasmic-name={"hospitalName"}
                         data-plasmic-override={overrides.hospitalName}
-                        className={classNames(projectcss.all, sty.hospitalName)}
+                        className={classNames("all", sty.hospitalName)}
                       >
                         <div
                           data-plasmic-name={"title"}
                           data-plasmic-override={overrides.title}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.title
-                          )}
+                          className={classNames("all", "__wab_text", sty.title)}
                         >
                           {
                             "\u0646\u0627\u0645 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
@@ -694,8 +654,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         </div>
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__ihQ91
                           )}
                         >
@@ -704,11 +664,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         <div
                           data-plasmic-name={"value"}
                           data-plasmic-override={overrides.value}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.value
-                          )}
+                          className={classNames("all", "__wab_text", sty.value)}
                         >
                           <React.Fragment>
                             {(() => {
@@ -731,14 +687,14 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       <div
                         data-plasmic-name={"hospitalSize"}
                         data-plasmic-override={overrides.hospitalSize}
-                        className={classNames(projectcss.all, sty.hospitalSize)}
+                        className={classNames("all", sty.hospitalSize)}
                       >
                         <div
                           data-plasmic-name={"title5"}
                           data-plasmic-override={overrides.title5}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.title5
                           )}
                         >
@@ -748,8 +704,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         </div>
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text___9X9A3
                           )}
                         >
@@ -759,8 +715,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           data-plasmic-name={"value5"}
                           data-plasmic-override={overrides.value5}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.value5
                           )}
                         >
@@ -791,17 +747,14 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       <div
                         data-plasmic-name={"subscriptionState"}
                         data-plasmic-override={overrides.subscriptionState}
-                        className={classNames(
-                          projectcss.all,
-                          sty.subscriptionState
-                        )}
+                        className={classNames("all", sty.subscriptionState)}
                       >
                         <div
                           data-plasmic-name={"title2"}
                           data-plasmic-override={overrides.title2}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.title2
                           )}
                         >
@@ -811,8 +764,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         </div>
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__gpZh4
                           )}
                         >
@@ -822,8 +775,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           data-plasmic-name={"value2"}
                           data-plasmic-override={overrides.value2}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.value2
                           )}
                         >
@@ -849,14 +802,14 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       <div
                         data-plasmic-name={"paymentState"}
                         data-plasmic-override={overrides.paymentState}
-                        className={classNames(projectcss.all, sty.paymentState)}
+                        className={classNames("all", sty.paymentState)}
                       >
                         <div
                           data-plasmic-name={"title7"}
                           data-plasmic-override={overrides.title7}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.title7
                           )}
                         >
@@ -866,8 +819,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         </div>
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__muiLe
                           )}
                         >
@@ -877,8 +830,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           data-plasmic-name={"value7"}
                           data-plasmic-override={overrides.value7}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.value7
                           )}
                         >
@@ -911,7 +864,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           overrides.subscriptionExpirationDate
                         }
                         className={classNames(
-                          projectcss.all,
+                          "all",
                           sty.subscriptionExpirationDate
                         )}
                       >
@@ -919,8 +872,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           data-plasmic-name={"title3"}
                           data-plasmic-override={overrides.title3}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.title3
                           )}
                         >
@@ -930,8 +883,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         </div>
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__wUnI6
                           )}
                         >
@@ -941,8 +894,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           data-plasmic-name={"value3"}
                           data-plasmic-override={overrides.value3}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.value3
                           )}
                         >
@@ -986,14 +939,14 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       <div
                         data-plasmic-name={"appUrl"}
                         data-plasmic-override={overrides.appUrl}
-                        className={classNames(projectcss.all, sty.appUrl)}
+                        className={classNames("all", sty.appUrl)}
                       >
                         <div
                           data-plasmic-name={"title4"}
                           data-plasmic-override={overrides.title4}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.title4
                           )}
                         >
@@ -1003,8 +956,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         </div>
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__l1YCh
                           )}
                         >
@@ -1014,8 +967,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           data-plasmic-name={"value4"}
                           data-plasmic-override={overrides.value4}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.value4
                           )}
                           onClick={async event => {
@@ -1069,17 +1022,14 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       <div
                         data-plasmic-name={"adminpanelUrl"}
                         data-plasmic-override={overrides.adminpanelUrl}
-                        className={classNames(
-                          projectcss.all,
-                          sty.adminpanelUrl
-                        )}
+                        className={classNames("all", sty.adminpanelUrl)}
                       >
                         <div
                           data-plasmic-name={"title6"}
                           data-plasmic-override={overrides.title6}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.title6
                           )}
                         >
@@ -1089,8 +1039,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                         </div>
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__dudjx
                           )}
                         >
@@ -1100,8 +1050,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           data-plasmic-name={"value6"}
                           data-plasmic-override={overrides.value6}
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.value6
                           )}
                           onClick={async event => {
@@ -1177,8 +1127,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                       data-plasmic-name={"errorMessage"}
                       data-plasmic-override={overrides.errorMessage}
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
+                        "all",
+                        "__wab_text",
                         sty.errorMessage
                       )}
                     >
@@ -1227,15 +1177,12 @@ function PlasmicAdminConsole__RenderFunc(props) {
                     <div
                       data-plasmic-name={"paymentDetailsStack"}
                       data-plasmic-override={overrides.paymentDetailsStack}
-                      className={classNames(
-                        projectcss.all,
-                        sty.paymentDetailsStack
-                      )}
+                      className={classNames("all", sty.paymentDetailsStack)}
                     >
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__boQkm
                         )}
                       >
@@ -1266,10 +1213,7 @@ function PlasmicAdminConsole__RenderFunc(props) {
                           <div
                             data-plasmic-name={"paymentDetails"}
                             data-plasmic-override={overrides.paymentDetails}
-                            className={classNames(
-                              projectcss.all,
-                              sty.paymentDetails
-                            )}
+                            className={classNames("all", sty.paymentDetails)}
                             dir={"rtl"}
                             key={currentIndex}
                           >
@@ -1277,8 +1221,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                               data-plasmic-name={"id"}
                               data-plasmic-override={overrides.id}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
+                                "all",
+                                "__wab_text",
                                 sty.id
                               )}
                             >
@@ -1303,8 +1247,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                               data-plasmic-name={"isProforma"}
                               data-plasmic-override={overrides.isProforma}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
+                                "all",
+                                "__wab_text",
                                 sty.isProforma
                               )}
                             >
@@ -1331,8 +1275,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                               data-plasmic-name={"startDate"}
                               data-plasmic-override={overrides.startDate}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
+                                "all",
+                                "__wab_text",
                                 sty.startDate
                               )}
                             >
@@ -1366,8 +1310,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                               data-plasmic-name={"endDate"}
                               data-plasmic-override={overrides.endDate}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
+                                "all",
+                                "__wab_text",
                                 sty.endDate
                               )}
                             >
@@ -1401,8 +1345,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                               data-plasmic-name={"paid"}
                               data-plasmic-override={overrides.paid}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
+                                "all",
+                                "__wab_text",
                                 sty.paid
                               )}
                             >
@@ -1429,8 +1373,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                               data-plasmic-name={"totalAmount"}
                               data-plasmic-override={overrides.totalAmount}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
+                                "all",
+                                "__wab_text",
                                 sty.totalAmount
                               )}
                             >
@@ -1460,8 +1404,8 @@ function PlasmicAdminConsole__RenderFunc(props) {
                               data-plasmic-name={"fileUrl"}
                               data-plasmic-override={overrides.fileUrl}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
+                                "all",
+                                "__wab_text",
                                 sty.fileUrl
                               )}
                               onClick={async event => {
@@ -1836,9 +1780,10 @@ export const PlasmicAdminConsole = Object.assign(
     internalVariantProps: PlasmicAdminConsole__VariantProps,
     internalArgProps: PlasmicAdminConsole__ArgProps,
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
+      pageRoute: "/admin-console",
       pagePath: "/admin-console",
-      searchParams: {},
-      params: {}
+      params: {},
+      query: {}
     })
   }
 );

@@ -29,7 +29,6 @@ import { BaseDialog } from "@plasmicpkgs/react-aria/skinny/registerDialog";
 import { BaseHeading } from "@plasmicpkgs/react-aria/skinny/registerHeading";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicModal.module.css"; // plasmic-import: 00eWS0fclycn/css
 
 createPlasmicElementProxy;
@@ -124,9 +123,9 @@ function PlasmicModal__RenderFunc(props) {
       data-plasmic-for-node={forNode}
       className={classNames(
         "__wab_instance",
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.ariaDialogTrigger,
         {
@@ -166,9 +165,9 @@ function PlasmicModal__RenderFunc(props) {
             $refs["ariaModal"] = ref;
           }}
           resetClassName={classNames(
-            projectcss.root_reset,
-            projectcss.plasmic_default_styles,
-            projectcss.plasmic_mixins,
+            "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+            "plasmic_default_styles",
+            "plasmic_mixins",
             styleTokensClassNames
           )}
         >
@@ -209,17 +208,15 @@ function PlasmicModal__RenderFunc(props) {
             <div
               data-plasmic-name={"scrollableContent"}
               data-plasmic-override={overrides.scrollableContent}
-              className={classNames(projectcss.all, sty.scrollableContent)}
+              className={classNames("all", sty.scrollableContent)}
             >
               {renderPlasmicSlot({
                 defaultContents: (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__geubl)}
-                  >
+                  <div className={classNames("all", sty.freeBox__geubl)}>
                     <div
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
+                        "all",
+                        "__wab_text",
                         sty.text__xiYdv
                       )}
                     >
@@ -227,8 +224,8 @@ function PlasmicModal__RenderFunc(props) {
                     </div>
                     <div
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
+                        "all",
+                        "__wab_text",
                         sty.text__reyz1
                       )}
                     >
@@ -246,20 +243,18 @@ function PlasmicModal__RenderFunc(props) {
               <div
                 data-plasmic-name={"freeBox"}
                 data-plasmic-override={overrides.freeBox}
-                className={classNames(projectcss.all, sty.freeBox)}
+                className={classNames("all", sty.freeBox)}
               >
                 {renderPlasmicSlot({
                   defaultContents: (
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__hwJj)}
-                    >
+                    <div className={classNames("all", sty.freeBox__hwJj)}>
                       <Button2
                         color={"muted"}
                         label={
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__t4S3B
                             )}
                           >

@@ -20,7 +20,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import projectcss from "./plasmic.module.css"; // plasmic-import: vqCYb2b7hLWP5fdSvXKe7g/projectcss
 import sty from "./PlasmicTeams.module.css"; // plasmic-import: lsj2lsPFgZdL/css
 
 createPlasmicElementProxy;
@@ -71,16 +70,16 @@ function PlasmicTeams__RenderFunc(props) {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_vqCYb2b7hLWP5fdSvXKe7g",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__zGYfa)}>
-        <div className={classNames(projectcss.all, sty.freeBox__q4Zh)}>
+      <div className={classNames("all", sty.freeBox__zGYfa)}>
+        <div className={classNames("all", sty.freeBox__q4Zh)}>
           {renderPlasmicSlot({
             defaultContents: (
               <PlasmicImg__
@@ -105,28 +104,28 @@ function PlasmicTeams__RenderFunc(props) {
             value: args.icon
           })}
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox__trkky)}>
+        <div className={classNames("all", sty.freeBox__trkky)}>
           {renderPlasmicSlot({
             defaultContents: "Jocylne Kujo",
             value: args.title,
             className: classNames(sty.slotTargetTitle)
           })}
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox__fpv1R)}>
+        <div className={classNames("all", sty.freeBox__fpv1R)}>
           {renderPlasmicSlot({
             defaultContents: "Founder Flappin",
             value: args.subtitle,
             className: classNames(sty.slotTargetSubtitle)
           })}
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox___6AqI7)}>
+        <div className={classNames("all", sty.freeBox___6AqI7)}>
           {renderPlasmicSlot({
             defaultContents:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.",
             value: args.description,
             className: classNames(sty.slotTargetDescription)
           })}
-          <div className={classNames(projectcss.all, sty.freeBox__bNuX)} />
+          <div className={classNames("all", sty.freeBox__bNuX)} />
         </div>
       </div>
     </div>
